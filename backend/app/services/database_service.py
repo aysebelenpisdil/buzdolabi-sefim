@@ -144,4 +144,17 @@ class DatabaseService:
             await db.close()
 
 
+    async def delete_interaction(self, user_id: str, interaction_id: int) -> bool:
+        db = await get_db()
+        try:
+            cursor = await db.execute(
+                "DELETE FROM recipe_interactions WHERE id = ? AND user_id = ?",
+                (interaction_id, user_id)
+            )
+            await db.commit()
+            return cursor.rowcount > 0
+        finally:
+            await db.close()
+
+
 database_service = DatabaseService()

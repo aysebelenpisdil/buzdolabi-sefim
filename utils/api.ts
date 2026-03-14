@@ -1,7 +1,7 @@
 import type {
     RAGRecommendRequest, RAGRecommendResponse,
     SubstitutionRequest, SubstitutionResponse,
-    SessionInfo, InteractionCreate, ConsumptionCreate, UserFeatures,
+    SessionInfo, InteractionCreate, ConsumptionCreate, UserFeatures, InteractionResponse,
 } from '../types';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
@@ -37,14 +37,18 @@ const handleApiError = async (response: Response): Promise<never> => {
  */
 export const getRecipes = async (params?: {
     ingredients?: string[];
+    q?: string;
     limit?: number;
     offset?: number;
 }) => {
     try {
         const queryParams = new URLSearchParams();
-        
+
         if (params?.ingredients && params.ingredients.length > 0) {
             queryParams.append('ingredients', params.ingredients.join(','));
+        }
+        if (params?.q) {
+            queryParams.append('q', params.q);
         }
         if (params?.limit) {
             queryParams.append('limit', params.limit.toString());
@@ -327,3 +331,21 @@ export const getRecipeStatus = async (recipeTitle: string): Promise<{ status: st
     return response.json();
 };
 
+export const deleteInteraction = async (id: number): Promise<void> => {
+    const response = await fetch(`${API_BASE_URL}/feedback/interaction/${id}`, {
+        method: 'DELETE',
+        credentials: 'include',
+    });
+    if (!response.ok && response.status !== 404) await handleApiError(response);
+};
+
+export const getInteractionHistory = async (
+    limit = 50, offset = 0
+): Promise<{ interactions: InteractionResponse[]; count: number }> => {
+    const response = await fetch(
+        `${API_BASE_URL}/feedback/history?limit=${limit}&offset=${offset}`,
+        { credentials: 'include' }
+    );
+    if (!response.ok) await handleApiError(response);
+    return response.json();
+};

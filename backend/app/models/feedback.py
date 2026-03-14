@@ -4,7 +4,7 @@ from typing import List, Literal, Optional
 
 class InteractionCreate(BaseModel):
     recipe_title: str
-    interaction_type: Literal["like", "skip", "view", "cook"]
+    interaction_type: Literal["like", "skip", "view", "cook", "save"]
     context_ingredients: Optional[List[str]] = None
 
 

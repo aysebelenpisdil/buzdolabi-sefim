@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 import logging
 from app.models.feedback import (
     InteractionCreate, ConsumptionCreate, UserFeatures,
@@ -81,6 +81,16 @@ async def get_consumption_history(
 async def get_weekly_repeats(user: dict = Depends(get_current_user)):
     repeats = await database_service.get_weekly_repeats(user["id"])
     return {"weekly_repeats": repeats, "count": len(repeats)}
+
+
+@router.delete("/interaction/{interaction_id}", status_code=204)
+async def delete_interaction(
+    interaction_id: int,
+    user: dict = Depends(get_current_user),
+):
+    deleted = await database_service.delete_interaction(user["id"], interaction_id)
+    if not deleted:
+        raise HTTPException(status_code=404, detail="Etkileşim bulunamadı")
 
 
 @router.get("/recipe-status/{recipe_title}")

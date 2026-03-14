@@ -30,24 +30,27 @@ router = APIRouter(prefix="/recipes", tags=["recipes"])
 @router.get("/", response_model=dict)
 async def get_recipes(
     ingredients: Optional[str] = Query(None, description="Comma-separated list of ingredients"),
-    limit: int = Query(50, ge=1, le=100),
+    q: Optional[str] = Query(None, description="Title substring search"),
+    limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0)
 ):
     """
-    Get all recipes with optional filtering by ingredients
+    Get all recipes with optional filtering by ingredients or title substring
     """
     try:
         if ingredients:
             # Filter by ingredients
             ingredient_list = [ing.strip() for ing in ingredients.split(',')]
             filtered_recipes = recipe_service.find_suitable_recipes(ingredient_list)
-            recipes = filtered_recipes[offset:offset + limit]
-            total = len(filtered_recipes)
         else:
-            # Get all recipes
-            recipes = recipe_service.get_all_recipes(limit, offset)
-            total = recipe_service.get_total_count()
-        
+            filtered_recipes = recipe_service.get_all_recipes(limit=500, offset=0)
+
+        if q:
+            filtered_recipes = [r for r in filtered_recipes if q.lower() in r.Title.lower()]
+
+        total = len(filtered_recipes)
+        recipes = filtered_recipes[offset:offset + limit]
+
         return {
             "recipes": recipes,
             "total": total,

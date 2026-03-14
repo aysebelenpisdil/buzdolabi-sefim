@@ -92,8 +92,15 @@ export interface SessionInfo {
 }
 
 // Feedback types
-export type InteractionType = 'like' | 'skip' | 'view' | 'cook';
+export type InteractionType = 'like' | 'skip' | 'view' | 'cook' | 'save';
 export type MealType = 'breakfast' | 'lunch' | 'dinner' | 'snack';
+
+export interface InteractionResponse {
+    id: number;
+    recipe_title: string;
+    interaction_type: InteractionType;
+    created_at: string;
+}
 
 export interface InteractionCreate {
     recipe_title: string;

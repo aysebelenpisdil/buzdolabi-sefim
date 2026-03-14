@@ -49,7 +49,12 @@ const Navbar: React.FC = () => {
 
                         {user ? (
                             <div className="flex items-center gap-3">
-                                <span className="text-sm text-gray-600 hidden sm:inline">{user.email}</span>
+                                <Link
+                                    to="/profile"
+                                    className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${isActive('/profile')}`}
+                                >
+                                    Profilim
+                                </Link>
                                 <button
                                     onClick={logout}
                                     className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-md transition-colors"

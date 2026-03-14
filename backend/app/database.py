@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS recipe_interactions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id TEXT NOT NULL REFERENCES users(id),
     recipe_title TEXT NOT NULL,
-    interaction_type TEXT NOT NULL CHECK(interaction_type IN ('like', 'skip', 'view', 'cook')),
+    interaction_type TEXT NOT NULL CHECK(interaction_type IN ('like', 'skip', 'view', 'cook', 'save')),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     context_ingredients TEXT
 );
@@ -104,6 +104,32 @@ async def init_db():
     db = await get_db()
     try:
         await db.executescript(SCHEMA_SQL)
+        # Migrate constraint to include 'save' if not already done.
+        # Drop the view first — SQLite rejects DROP TABLE while a view references it.
+        cursor = await db.execute(
+            "SELECT sql FROM sqlite_master WHERE type='table' AND name='recipe_interactions'"
+        )
+        row = await cursor.fetchone()
+        if row and "'save'" not in row[0]:
+            await db.executescript("""
+                BEGIN;
+                DROP VIEW IF EXISTS user_features;
+                CREATE TABLE IF NOT EXISTS recipe_interactions_new (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    user_id TEXT NOT NULL REFERENCES users(id),
+                    recipe_title TEXT NOT NULL,
+                    interaction_type TEXT NOT NULL CHECK(interaction_type IN ('like','skip','view','cook','save')),
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    context_ingredients TEXT
+                );
+                INSERT OR IGNORE INTO recipe_interactions_new SELECT * FROM recipe_interactions;
+                DROP TABLE recipe_interactions;
+                ALTER TABLE recipe_interactions_new RENAME TO recipe_interactions;
+                CREATE INDEX IF NOT EXISTS idx_interactions_user ON recipe_interactions(user_id);
+                CREATE INDEX IF NOT EXISTS idx_interactions_type ON recipe_interactions(interaction_type);
+                CREATE INDEX IF NOT EXISTS idx_interactions_recipe ON recipe_interactions(recipe_title);
+                COMMIT;
+            """)
         await db.executescript(USER_FEATURES_VIEW_SQL)
         await db.commit()
         logger.info(f"Database initialized at {DB_PATH}")

@@ -6,6 +6,7 @@ import RecipesPage from './pages/RecipesPage';
 import RecipeDetailPage from './pages/RecipeDetailPage';
 import PreferencesPage from './pages/PreferencesPage';
 import LoginPage from './pages/LoginPage';
+import ProfilePage from './pages/ProfilePage';
 import { FridgeProvider } from './store/FridgeContext';
 import { AuthProvider } from './store/AuthContext';
 
@@ -22,6 +23,7 @@ const App: React.FC = () => {
                       <Route path="/recipe/:title" element={<RecipeDetailPage />} />
                       <Route path="/preferences" element={<PreferencesPage />} />
                       <Route path="/login" element={<LoginPage />} />
+                      <Route path="/profile" element={<ProfilePage />} />
                   </Routes>
               </div>
           </Router>

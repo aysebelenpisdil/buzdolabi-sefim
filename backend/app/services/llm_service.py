@@ -308,23 +308,33 @@ Yanıtın SADECE bu JSON formatında olsun, tırnak ve virgüllere dikkat et."""
             if raw.startswith("json"):
                 raw = raw[4:].lstrip()
 
+            def _normalize_llm_json(text: str) -> str:
+                """Python-style değerleri geçerli JSON'a çevir."""
+                text = re.sub(r'\bNone\b', 'null', text)
+                text = re.sub(r'\bTrue\b', 'true', text)
+                text = re.sub(r'\bFalse\b', 'false', text)
+                # Sondaki virgülleri temizle
+                text = re.sub(r',\s*}', '}', text)
+                text = re.sub(r',\s*]', ']', text)
+                return text
+
             result = None
             try:
-                result = json.loads(raw)
+                result = json.loads(_normalize_llm_json(raw))
             except json.JSONDecodeError as parse_err:
                 # LLM bazen bozuk JSON döndürür; JSON bloğunu çıkarmayı dene
                 match = re.search(r'\{[\s\S]*\}', raw)
                 if match:
                     try:
-                        candidate = match.group(0)
-                        # Yaygın LLM hatalarını düzelt: sondaki virgül
-                        candidate = re.sub(r',\s*}', '}', candidate)
-                        candidate = re.sub(r',\s*]', ']', candidate)
+                        candidate = _normalize_llm_json(match.group(0))
                         result = json.loads(candidate)
                     except json.JSONDecodeError:
                         pass
                 if result is None:
-                    logger.warning(f"LLM JSON parse failed ({parse_err}), returning empty substitutions")
+                    logger.warning(
+                        f"LLM JSON parse failed ({parse_err}), raw response:\n{raw}\n"
+                        "returning empty substitutions"
+                    )
                     return {"substitutions": {}, "explanation": "İkame önerileri şu an yüklenemedi."}
 
             logger.debug(f"Substitutions generated for {len(missing_ingredients)} ingredients")
