@@ -1,0 +1,850 @@
+[
+  {
+    "name": "tuz",
+    "count": 385
+  },
+  {
+    "name": "soğan",
+    "count": 238
+  },
+  {
+    "name": "karabiber",
+    "count": 219
+  },
+  {
+    "name": "zeytinyağı",
+    "count": 217
+  },
+  {
+    "name": "su",
+    "count": 170
+  },
+  {
+    "name": "pul biber",
+    "count": 148
+  },
+  {
+    "name": "tereyağı",
+    "count": 140
+  },
+  {
+    "name": "toz şeker",
+    "count": 125
+  },
+  {
+    "name": "domates",
+    "count": 115
+  },
+  {
+    "name": "domates salçası",
+    "count": 111
+  },
+  {
+    "name": "yumurta",
+    "count": 107
+  },
+  {
+    "name": "un",
+    "count": 94
+  },
+  {
+    "name": "patates",
+    "count": 73
+  },
+  {
+    "name": "sarımsak",
+    "count": 73
+  },
+  {
+    "name": "sivri biber",
+    "count": 68
+  },
+  {
+    "name": "limon",
+    "count": 62
+  },
+  {
+    "name": "maydanoz",
+    "count": 62
+  },
+  {
+    "name": "vanilya",
+    "count": 58
+  },
+  {
+    "name": "pirinç",
+    "count": 57
+  },
+  {
+    "name": "süt",
+    "count": 51
+  },
+  {
+    "name": "kimyon",
+    "count": 48
+  },
+  {
+    "name": "mısır unu",
+    "count": 48
+  },
+  {
+    "name": "biber salçası",
+    "count": 46
+  },
+  {
+    "name": "kıyma",
+    "count": 46
+  },
+  {
+    "name": "nane",
+    "count": 38
+  },
+  {
+    "name": "yulaf sütü",
+    "count": 35
+  },
+  {
+    "name": "limon suyu",
+    "count": 34
+  },
+  {
+    "name": "kekik",
+    "count": 33
+  },
+  {
+    "name": "kızartma yağı",
+    "count": 31
+  },
+  {
+    "name": "mısır nişastası",
+    "count": 31
+  },
+  {
+    "name": "yoğurt",
+    "count": 30
+  },
+  {
+    "name": "patlıcan",
+    "count": 29
+  },
+  {
+    "name": "yaş maya",
+    "count": 27
+  },
+  {
+    "name": "şeker",
+    "count": 27
+  },
+  {
+    "name": "havuç",
+    "count": 26
+  },
+  {
+    "name": "sıvı yağ",
+    "count": 24
+  },
+  {
+    "name": "kabartma tozu",
+    "count": 23
+  },
+  {
+    "name": "yufka",
+    "count": 21
+  },
+  {
+    "name": "dereotu",
+    "count": 20
+  },
+  {
+    "name": "margarin",
+    "count": 20
+  },
+  {
+    "name": "beyaz peynir",
+    "count": 18
+  },
+  {
+    "name": "pirinç unu",
+    "count": 18
+  },
+  {
+    "name": "dana eti",
+    "count": 17
+  },
+  {
+    "name": "kuzu eti",
+    "count": 17
+  },
+  {
+    "name": "kırmızı mercimek",
+    "count": 17
+  },
+  {
+    "name": "nişasta",
+    "count": 17
+  },
+  {
+    "name": "nohut",
+    "count": 17
+  },
+  {
+    "name": "ceviz",
+    "count": 16
+  },
+  {
+    "name": "glutensiz un karışımı",
+    "count": 16
+  },
+  {
+    "name": "lavaş",
+    "count": 16
+  },
+  {
+    "name": "nar ekşisi",
+    "count": 15
+  },
+  {
+    "name": "sebze suyu",
+    "count": 14
+  },
+  {
+    "name": "kakao",
+    "count": 13
+  },
+  {
+    "name": "instant maya",
+    "count": 12
+  },
+  {
+    "name": "irmik",
+    "count": 12
+  },
+  {
+    "name": "tavuk suyu",
+    "count": 12
+  },
+  {
+    "name": "kabak",
+    "count": 11
+  },
+  {
+    "name": "kaşar peyniri",
+    "count": 11
+  },
+  {
+    "name": "sirke",
+    "count": 11
+  },
+  {
+    "name": "tarçın",
+    "count": 11
+  },
+  {
+    "name": "tavuk göğsü",
+    "count": 11
+  },
+  {
+    "name": "biber",
+    "count": 10
+  },
+  {
+    "name": "bulgur",
+    "count": 10
+  },
+  {
+    "name": "dana kıyma",
+    "count": 10
+  },
+  {
+    "name": "istiridye mantarı",
+    "count": 10
+  },
+  {
+    "name": "soya kıyma",
+    "count": 10
+  },
+  {
+    "name": "zerdeçal",
+    "count": 10
+  },
+  {
+    "name": "bayat ekmek",
+    "count": 9
+  },
+  {
+    "name": "tahin",
+    "count": 9
+  },
+  {
+    "name": "tavuk but",
+    "count": 9
+  },
+  {
+    "name": "yeşil soğan",
+    "count": 9
+  },
+  {
+    "name": "bezelye",
+    "count": 8
+  },
+  {
+    "name": "kuru fasulye",
+    "count": 8
+  },
+  {
+    "name": "sumak",
+    "count": 8
+  },
+  {
+    "name": "çörek otu",
+    "count": 8
+  },
+  {
+    "name": "ıspanak",
+    "count": 8
+  },
+  {
+    "name": "badem sütü",
+    "count": 7
+  },
+  {
+    "name": "baklava yufkası",
+    "count": 7
+  },
+  {
+    "name": "gül suyu",
+    "count": 7
+  },
+  {
+    "name": "tofu",
+    "count": 7
+  },
+  {
+    "name": "yumurta sarısı",
+    "count": 7
+  },
+  {
+    "name": "hindistan cevizi",
+    "count": 6
+  },
+  {
+    "name": "hindistan cevizi sütü",
+    "count": 6
+  },
+  {
+    "name": "ince bulgur",
+    "count": 6
+  },
+  {
+    "name": "krema",
+    "count": 6
+  },
+  {
+    "name": "nar",
+    "count": 6
+  },
+  {
+    "name": "pekmez",
+    "count": 6
+  },
+  {
+    "name": "soya yoğurdu",
+    "count": 6
+  },
+  {
+    "name": "susam",
+    "count": 6
+  },
+  {
+    "name": "tel kadayıf",
+    "count": 6
+  },
+  {
+    "name": "vegan kaşar",
+    "count": 6
+  },
+  {
+    "name": "çilek",
+    "count": 6
+  },
+  {
+    "name": "et suyu",
+    "count": 5
+  },
+  {
+    "name": "hindistan cevizi krema",
+    "count": 5
+  },
+  {
+    "name": "karabuğday",
+    "count": 5
+  },
+  {
+    "name": "kuru üzüm",
+    "count": 5
+  },
+  {
+    "name": "lor peyniri",
+    "count": 5
+  },
+  {
+    "name": "salatalık",
+    "count": 5
+  },
+  {
+    "name": "soya kuşbaşı",
+    "count": 5
+  },
+  {
+    "name": "çam fıstığı",
+    "count": 5
+  },
+  {
+    "name": "antep fıstığı",
+    "count": 4
+  },
+  {
+    "name": "güllaç yaprağı",
+    "count": 4
+  },
+  {
+    "name": "karides",
+    "count": 4
+  },
+  {
+    "name": "kuş üzümü",
+    "count": 4
+  },
+  {
+    "name": "marul",
+    "count": 4
+  },
+  {
+    "name": "muz",
+    "count": 4
+  },
+  {
+    "name": "mısır",
+    "count": 4
+  },
+  {
+    "name": "taze fasulye",
+    "count": 4
+  },
+  {
+    "name": "turşu",
+    "count": 4
+  },
+  {
+    "name": "vegan bitter çikolata",
+    "count": 4
+  },
+  {
+    "name": "yeşil mercimek",
+    "count": 4
+  },
+  {
+    "name": "badem",
+    "count": 3
+  },
+  {
+    "name": "barbunya",
+    "count": 3
+  },
+  {
+    "name": "bisküvi",
+    "count": 3
+  },
+  {
+    "name": "bitter çikolata",
+    "count": 3
+  },
+  {
+    "name": "buğday",
+    "count": 3
+  },
+  {
+    "name": "börülce",
+    "count": 3
+  },
+  {
+    "name": "ekmek",
+    "count": 3
+  },
+  {
+    "name": "firik",
+    "count": 3
+  },
+  {
+    "name": "glutensiz tarhana",
+    "count": 3
+  },
+  {
+    "name": "kereviz",
+    "count": 3
+  },
+  {
+    "name": "kinoa",
+    "count": 3
+  },
+  {
+    "name": "kuru kayısı",
+    "count": 3
+  },
+  {
+    "name": "kırmızı biber",
+    "count": 3
+  },
+  {
+    "name": "limon kabuğu",
+    "count": 3
+  },
+  {
+    "name": "mantar",
+    "count": 3
+  },
+  {
+    "name": "midye",
+    "count": 3
+  },
+  {
+    "name": "nori yosunu",
+    "count": 3
+  },
+  {
+    "name": "pudra şekeri",
+    "count": 3
+  },
+  {
+    "name": "somon fileto",
+    "count": 3
+  },
+  {
+    "name": "soya yoğurt",
+    "count": 3
+  },
+  {
+    "name": "arpacık soğan",
+    "count": 2
+  },
+  {
+    "name": "asma yaprağı",
+    "count": 2
+  },
+  {
+    "name": "aşurelik buğday",
+    "count": 2
+  },
+  {
+    "name": "badem unu",
+    "count": 2
+  },
+  {
+    "name": "balık fileto",
+    "count": 2
+  },
+  {
+    "name": "bayat pide",
+    "count": 2
+  },
+  {
+    "name": "beyaz lahana",
+    "count": 2
+  },
+  {
+    "name": "beşamel sos",
+    "count": 2
+  },
+  {
+    "name": "biberiye",
+    "count": 2
+  },
+  {
+    "name": "buz",
+    "count": 2
+  },
+  {
+    "name": "bütün tavuk",
+    "count": 2
+  },
+  {
+    "name": "damla sakızı",
+    "count": 2
+  },
+  {
+    "name": "dolmalık biber",
+    "count": 2
+  },
+  {
+    "name": "enginar",
+    "count": 2
+  },
+  {
+    "name": "galeta unu",
+    "count": 2
+  },
+  {
+    "name": "gendime",
+    "count": 2
+  },
+  {
+    "name": "hamburger ekmeği",
+    "count": 2
+  },
+  {
+    "name": "hamsi",
+    "count": 2
+  },
+  {
+    "name": "hindi but",
+    "count": 2
+  },
+  {
+    "name": "kalamar",
+    "count": 2
+  },
+  {
+    "name": "kaymak",
+    "count": 2
+  },
+  {
+    "name": "kuru bakla",
+    "count": 2
+  },
+  {
+    "name": "kuru bamya",
+    "count": 2
+  },
+  {
+    "name": "kuzu bağırsak",
+    "count": 2
+  },
+  {
+    "name": "kuzu but",
+    "count": 2
+  },
+  {
+    "name": "kuzu döner eti",
+    "count": 2
+  },
+  {
+    "name": "kuzu kol",
+    "count": 2
+  },
+  {
+    "name": "künefe peyniri",
+    "count": 2
+  },
+  {
+    "name": "midye eti",
+    "count": 2
+  },
+  {
+    "name": "pide",
+    "count": 2
+  },
+  {
+    "name": "portakal suyu",
+    "count": 2
+  },
+  {
+    "name": "pırasa",
+    "count": 2
+  },
+  {
+    "name": "salep",
+    "count": 2
+  },
+  {
+    "name": "semizotu",
+    "count": 2
+  },
+  {
+    "name": "sosis",
+    "count": 2
+  },
+  {
+    "name": "soya sosu",
+    "count": 2
+  },
+  {
+    "name": "sucuk",
+    "count": 2
+  },
+  {
+    "name": "tavuk ciğeri",
+    "count": 2
+  },
+  {
+    "name": "taze bakla",
+    "count": 2
+  },
+  {
+    "name": "taze barbunya",
+    "count": 2
+  },
+  {
+    "name": "taze kaşar peyniri",
+    "count": 2
+  },
+  {
+    "name": "tost ekmeği",
+    "count": 2
+  },
+  {
+    "name": "uskumru fileto",
+    "count": 2
+  },
+  {
+    "name": "vegan bisküvi",
+    "count": 2
+  },
+  {
+    "name": "yenibahar",
+    "count": 2
+  },
+  {
+    "name": "yeşil zeytin",
+    "count": 2
+  },
+  {
+    "name": "yoğunlaştırılmış süt",
+    "count": 2
+  },
+  {
+    "name": "şehriye",
+    "count": 2
+  },
+  {
+    "name": "agar agar",
+    "count": 1
+  },
+  {
+    "name": "bira",
+    "count": 1
+  },
+  {
+    "name": "dolmalık fıstık",
+    "count": 1
+  },
+  {
+    "name": "glutensiz ekmek",
+    "count": 1
+  },
+  {
+    "name": "glutensiz hamburger ekmeği",
+    "count": 1
+  },
+  {
+    "name": "hindi göğsü",
+    "count": 1
+  },
+  {
+    "name": "işkembe",
+    "count": 1
+  },
+  {
+    "name": "jelatin",
+    "count": 1
+  },
+  {
+    "name": "karalahana",
+    "count": 1
+  },
+  {
+    "name": "kuru incir",
+    "count": 1
+  },
+  {
+    "name": "levrek",
+    "count": 1
+  },
+  {
+    "name": "levrek fileto",
+    "count": 1
+  },
+  {
+    "name": "maraş tarhanası",
+    "count": 1
+  },
+  {
+    "name": "mayonez",
+    "count": 1
+  },
+  {
+    "name": "mezgit fileto",
+    "count": 1
+  },
+  {
+    "name": "mısır gevreği kırığı",
+    "count": 1
+  },
+  {
+    "name": "mısır tortilla",
+    "count": 1
+  },
+  {
+    "name": "palamut",
+    "count": 1
+  },
+  {
+    "name": "pastırma",
+    "count": 1
+  },
+  {
+    "name": "penne makarna",
+    "count": 1
+  },
+  {
+    "name": "soda",
+    "count": 1
+  },
+  {
+    "name": "süzme yoğurt",
+    "count": 1
+  },
+  {
+    "name": "tarhana",
+    "count": 1
+  },
+  {
+    "name": "tavuk baget",
+    "count": 1
+  },
+  {
+    "name": "tavuk kanat",
+    "count": 1
+  },
+  {
+    "name": "tavuk pirzola",
+    "count": 1
+  },
+  {
+    "name": "trabzon peyniri",
+    "count": 1
+  },
+  {
+    "name": "tuzsuz lor",
+    "count": 1
+  },
+  {
+    "name": "vegan beyaz peynir",
+    "count": 1
+  },
+  {
+    "name": "yeşil biber",
+    "count": 1
+  },
+  {
+    "name": "yeşil domates",
+    "count": 1
+  },
+  {
+    "name": "çeçil peyniri",
+    "count": 1
+  },
+  {
+    "name": "çiğ köftelik bulgur",
+    "count": 1
+  }
+]

@@ -1,0 +1,2508 @@
+{
+  "index_type": "IndexFlatL2",
+  "metric": "L2",
+  "dimension": 384,
+  "num_vectors": 500,
+  "recipes": [
+    {
+      "index": 0,
+      "title": "Karnıyarık",
+      "image_name": "karniyarik"
+    },
+    {
+      "index": 1,
+      "title": "İmam Bayıldı",
+      "image_name": "imam-bayildi"
+    },
+    {
+      "index": 2,
+      "title": "Mercimek Çorbası",
+      "image_name": "mercimek-corbasi"
+    },
+    {
+      "index": 3,
+      "title": "Kuru Fasulye",
+      "image_name": "kuru-fasulye"
+    },
+    {
+      "index": 4,
+      "title": "Lahmacun",
+      "image_name": "lahmacun"
+    },
+    {
+      "index": 5,
+      "title": "Mantı",
+      "image_name": "manti"
+    },
+    {
+      "index": 6,
+      "title": "Hünkar Beğendi",
+      "image_name": "hunkar-begendi"
+    },
+    {
+      "index": 7,
+      "title": "Çılbır",
+      "image_name": "cilbir"
+    },
+    {
+      "index": 8,
+      "title": "İçli Köfte",
+      "image_name": "icli-kofte"
+    },
+    {
+      "index": 9,
+      "title": "Etli Nohut Yemeği",
+      "image_name": "etli-nohut"
+    },
+    {
+      "index": 10,
+      "title": "Zeytinyağlı Yaprak Sarma",
+      "image_name": "zeytinyagli-yaprak-sarma"
+    },
+    {
+      "index": 11,
+      "title": "Şakşuka",
+      "image_name": "saksuka"
+    },
+    {
+      "index": 12,
+      "title": "Zeytinyağlı Barbunya",
+      "image_name": "zeytinyagli-barbunya"
+    },
+    {
+      "index": 13,
+      "title": "Kısır",
+      "image_name": "kisir"
+    },
+    {
+      "index": 14,
+      "title": "Menemen",
+      "image_name": "menemen"
+    },
+    {
+      "index": 15,
+      "title": "Adana Kebap",
+      "image_name": "adana-kebap"
+    },
+    {
+      "index": 16,
+      "title": "Sütlaç",
+      "image_name": "sutlac"
+    },
+    {
+      "index": 17,
+      "title": "Baklava",
+      "image_name": "baklava"
+    },
+    {
+      "index": 18,
+      "title": "Türlü",
+      "image_name": "turlu"
+    },
+    {
+      "index": 19,
+      "title": "Ezogelin Çorbası",
+      "image_name": "ezogelin-corbasi"
+    },
+    {
+      "index": 20,
+      "title": "Tas Kebabı",
+      "image_name": "tas-kebabi"
+    },
+    {
+      "index": 21,
+      "title": "Patlıcan Musakka",
+      "image_name": "patlican-musakka"
+    },
+    {
+      "index": 22,
+      "title": "Pilav Üstü Kuru Fasulye",
+      "image_name": "pilav-ustu-kuru-fasulye"
+    },
+    {
+      "index": 23,
+      "title": "Ispanaklı Yumurta",
+      "image_name": "ispanakli-yumurta"
+    },
+    {
+      "index": 24,
+      "title": "Ali Nazik Kebap",
+      "image_name": "ali-nazik-kebap"
+    },
+    {
+      "index": 25,
+      "title": "Vegan Mercimek Köftesi (Vegan)",
+      "image_name": "vegan-mercimek-koftesi"
+    },
+    {
+      "index": 26,
+      "title": "Vegan Karnıyarık (Vegan)",
+      "image_name": "vegan-karniyarik"
+    },
+    {
+      "index": 27,
+      "title": "Vegan Menemen (Vegan)",
+      "image_name": "vegan-menemen"
+    },
+    {
+      "index": 28,
+      "title": "Vegan Çılbır (Vegan)",
+      "image_name": "vegan-cilbir"
+    },
+    {
+      "index": 29,
+      "title": "Glutensiz Lahmacun (Glutensiz)",
+      "image_name": "glutensiz-lahmacun"
+    },
+    {
+      "index": 30,
+      "title": "Glutensiz Mercimek Çorbası (Glutensiz)",
+      "image_name": "glutensiz-mercimek-corbasi"
+    },
+    {
+      "index": 31,
+      "title": "Glutensiz İçli Köfte (Glutensiz)",
+      "image_name": "glutensiz-icli-kofte"
+    },
+    {
+      "index": 32,
+      "title": "Yulaf Sütlü Sütlaç (Vegan & Glutensiz)",
+      "image_name": "yulaf-sutlu-sutlac"
+    },
+    {
+      "index": 33,
+      "title": "Laktozsuz Sütlaç (Süt Ürünü Yok)",
+      "image_name": "laktozsuz-sutlac"
+    },
+    {
+      "index": 34,
+      "title": "Vejetaryen Kuru Fasulye (Vejetaryen)",
+      "image_name": "vejetaryen-kuru-fasulye"
+    },
+    {
+      "index": 35,
+      "title": "Vejetaryen Mantı (Vejetaryen)",
+      "image_name": "vejetaryen-manti"
+    },
+    {
+      "index": 36,
+      "title": "Vejetaryen Pide (Vejetaryen)",
+      "image_name": "vejetaryen-pide"
+    },
+    {
+      "index": 37,
+      "title": "Glutensiz Kısır (Glutensiz)",
+      "image_name": "glutensiz-kisir"
+    },
+    {
+      "index": 38,
+      "title": "Glutensiz Ezogelin Çorbası (Glutensiz)",
+      "image_name": "glutensiz-ezogelin-corbasi"
+    },
+    {
+      "index": 39,
+      "title": "Süt Ürünsüz Hünkar Beğendi (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-hunkar-begendi"
+    },
+    {
+      "index": 40,
+      "title": "Vegan Yaprak Sarma (Vegan)",
+      "image_name": "vegan-yaprak-sarma"
+    },
+    {
+      "index": 41,
+      "title": "Vejetaryen Ispanaklı Börek (Vejetaryen)",
+      "image_name": "vejetaryen-ispanakli-borek"
+    },
+    {
+      "index": 42,
+      "title": "Kuruyemişsiz Aşure (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-asure"
+    },
+    {
+      "index": 43,
+      "title": "Glutensiz Patates Köftesi (Glutensiz & Vejetaryen)",
+      "image_name": "glutensiz-patates-koftesi"
+    },
+    {
+      "index": 44,
+      "title": "Vegan Mercimek Çorbası (Vegan & Glutensiz)",
+      "image_name": "vegan-mercimek-corbasi"
+    },
+    {
+      "index": 45,
+      "title": "Vejetaryen Patlıcan Musakka (Vejetaryen)",
+      "image_name": "vejetaryen-patlican-musakka"
+    },
+    {
+      "index": 46,
+      "title": "Süt Ürünsüz Menemen (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-menemen"
+    },
+    {
+      "index": 47,
+      "title": "Vegan Baklava (Vegan)",
+      "image_name": "vegan-baklava"
+    },
+    {
+      "index": 48,
+      "title": "Kuruyemişsiz Baklava (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-baklava"
+    },
+    {
+      "index": 49,
+      "title": "Glutensiz Mücver (Glutensiz & Vejetaryen)",
+      "image_name": "glutensiz-mucver"
+    },
+    {
+      "index": 50,
+      "title": "Yayla Çorbası",
+      "image_name": "yayla-corbasi"
+    },
+    {
+      "index": 51,
+      "title": "Tarhana Çorbası",
+      "image_name": "tarhana-corbasi"
+    },
+    {
+      "index": 52,
+      "title": "İşkembe Çorbası",
+      "image_name": "iskembe-corbasi"
+    },
+    {
+      "index": 53,
+      "title": "Toyga Çorbası",
+      "image_name": "toyga-corbasi"
+    },
+    {
+      "index": 54,
+      "title": "Lebeniye Çorbası",
+      "image_name": "lebeniye-corbasi"
+    },
+    {
+      "index": 55,
+      "title": "Analı Kızlı Çorbası",
+      "image_name": "anali-kizli-corbasi"
+    },
+    {
+      "index": 56,
+      "title": "Düğün Çorbası",
+      "image_name": "dugun-corbasi"
+    },
+    {
+      "index": 57,
+      "title": "Süleymaniye Çorbası",
+      "image_name": "suleymaniye-corbasi"
+    },
+    {
+      "index": 58,
+      "title": "Yüksük Çorbası",
+      "image_name": "yuksuk-corbasi"
+    },
+    {
+      "index": 59,
+      "title": "Beyran Çorbası",
+      "image_name": "beyran-corbasi"
+    },
+    {
+      "index": 60,
+      "title": "Zeytinyağlı Enginar",
+      "image_name": "zeytinyagli-enginar"
+    },
+    {
+      "index": 61,
+      "title": "Zeytinyağlı Kereviz",
+      "image_name": "zeytinyagli-kereviz"
+    },
+    {
+      "index": 62,
+      "title": "Zeytinyağlı Pırasa",
+      "image_name": "zeytinyagli-pirasa"
+    },
+    {
+      "index": 63,
+      "title": "Zeytinyağlı Taze Fasulye",
+      "image_name": "zeytinyagli-taze-fasulye"
+    },
+    {
+      "index": 64,
+      "title": "Zeytinyağlı Bakla",
+      "image_name": "zeytinyagli-bakla"
+    },
+    {
+      "index": 65,
+      "title": "Zeytinyağlı Börülce",
+      "image_name": "zeytinyagli-borulce"
+    },
+    {
+      "index": 66,
+      "title": "Haydari",
+      "image_name": "haydari"
+    },
+    {
+      "index": 67,
+      "title": "Acılı Ezme",
+      "image_name": "acili-ezme"
+    },
+    {
+      "index": 68,
+      "title": "Patlıcan Salatası",
+      "image_name": "patlican-salatasi"
+    },
+    {
+      "index": 69,
+      "title": "Çoban Salatası",
+      "image_name": "coban-salatasi"
+    },
+    {
+      "index": 70,
+      "title": "Atom Salatası",
+      "image_name": "atom-salatasi"
+    },
+    {
+      "index": 71,
+      "title": "Gavurdağı Salatası",
+      "image_name": "gavurdagi-salatasi"
+    },
+    {
+      "index": 72,
+      "title": "Humus",
+      "image_name": "humus"
+    },
+    {
+      "index": 73,
+      "title": "Babaganuş",
+      "image_name": "babaganus"
+    },
+    {
+      "index": 74,
+      "title": "Muhammara",
+      "image_name": "muhammara"
+    },
+    {
+      "index": 75,
+      "title": "Glutensiz Tarhana Çorbası (Glutensiz)",
+      "image_name": "glutensiz-tarhana-corbasi"
+    },
+    {
+      "index": 76,
+      "title": "Vegan Yayla Çorbası (Vegan)",
+      "image_name": "vegan-yayla-corbasi"
+    },
+    {
+      "index": 77,
+      "title": "Vegan Düğün Çorbası (Vegan & Glutensiz)",
+      "image_name": "vegan-dugun-corbasi"
+    },
+    {
+      "index": 78,
+      "title": "Süt Ürünsüz Toyga Çorbası (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-toyga-corbasi"
+    },
+    {
+      "index": 79,
+      "title": "Glutensiz Düğün Çorbası (Glutensiz)",
+      "image_name": "glutensiz-dugun-corbasi"
+    },
+    {
+      "index": 80,
+      "title": "Vegan Tarhana Çorbası (Vegan & Glutensiz)",
+      "image_name": "vegan-tarhana-corbasi"
+    },
+    {
+      "index": 81,
+      "title": "Vegan Enginar (Vegan)",
+      "image_name": "vegan-enginar"
+    },
+    {
+      "index": 82,
+      "title": "Vegan Kereviz (Vegan)",
+      "image_name": "vegan-kereviz"
+    },
+    {
+      "index": 83,
+      "title": "Vegan Zeytinyağlı Taze Fasulye (Vegan)",
+      "image_name": "vegan-zeytinyagli-taze-fasulye"
+    },
+    {
+      "index": 84,
+      "title": "Vegan Bakla (Vegan)",
+      "image_name": "vegan-bakla"
+    },
+    {
+      "index": 85,
+      "title": "Laktozsuz Haydari (Süt Ürünü Yok)",
+      "image_name": "laktozsuz-haydari"
+    },
+    {
+      "index": 86,
+      "title": "Vegan Humus (Vegan & Glutensiz)",
+      "image_name": "vegan-humus"
+    },
+    {
+      "index": 87,
+      "title": "Vegan Babaganuş (Vegan & Glutensiz)",
+      "image_name": "vegan-babaganus"
+    },
+    {
+      "index": 88,
+      "title": "Kuruyemişsiz Muhammara (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-muhammara"
+    },
+    {
+      "index": 89,
+      "title": "Glutensiz Muhammara (Glutensiz)",
+      "image_name": "glutensiz-muhammara"
+    },
+    {
+      "index": 90,
+      "title": "Vejetaryen Yoğurtlu Semizotu (Vejetaryen)",
+      "image_name": "vejetaryen-yogurtlu-semizotu"
+    },
+    {
+      "index": 91,
+      "title": "Vegan Semizotu Salatası (Vegan & Glutensiz)",
+      "image_name": "vegan-semizotu-salatasi"
+    },
+    {
+      "index": 92,
+      "title": "Süt Ürünsüz Patlıcan Salatası (Süt Ürünü Yok & Glutensiz)",
+      "image_name": "sut-urunsuz-patlican-salatasi"
+    },
+    {
+      "index": 93,
+      "title": "Kuruyemişsiz Gavurdağı Salatası (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-gavurdagi-salatasi"
+    },
+    {
+      "index": 94,
+      "title": "Vegan Pırasa (Vegan)",
+      "image_name": "vegan-pirasa"
+    },
+    {
+      "index": 95,
+      "title": "Vejetaryen Kabak Çorbası (Vejetaryen)",
+      "image_name": "vejetaryen-kabak-corbasi"
+    },
+    {
+      "index": 96,
+      "title": "Vegan Kabak Çorbası (Vegan & Glutensiz)",
+      "image_name": "vegan-kabak-corbasi"
+    },
+    {
+      "index": 97,
+      "title": "Vegan Börülce Salatası (Vegan & Glutensiz)",
+      "image_name": "vegan-borulce-salatasi"
+    },
+    {
+      "index": 98,
+      "title": "Glutensiz Lebeniye Çorbası (Glutensiz)",
+      "image_name": "glutensiz-lebeniye-corbasi"
+    },
+    {
+      "index": 99,
+      "title": "Vegan Acılı Ezme (Vegan & Glutensiz)",
+      "image_name": "vegan-acili-ezme"
+    },
+    {
+      "index": 100,
+      "title": "Kadınbudu Köfte",
+      "image_name": "kadinbudu-kofte"
+    },
+    {
+      "index": 101,
+      "title": "İzmir Köfte",
+      "image_name": "izmir-kofte"
+    },
+    {
+      "index": 102,
+      "title": "Tekirdağ Köfte",
+      "image_name": "tekirdag-kofte"
+    },
+    {
+      "index": 103,
+      "title": "Sulu Köfte",
+      "image_name": "sulu-kofte"
+    },
+    {
+      "index": 104,
+      "title": "Dalyan Köfte",
+      "image_name": "dalyan-kofte"
+    },
+    {
+      "index": 105,
+      "title": "Etli Kapuska",
+      "image_name": "etli-kapuska"
+    },
+    {
+      "index": 106,
+      "title": "Etli Güveç",
+      "image_name": "etli-guvec"
+    },
+    {
+      "index": 107,
+      "title": "Orman Kebabı",
+      "image_name": "orman-kebabi"
+    },
+    {
+      "index": 108,
+      "title": "İskender Kebap",
+      "image_name": "iskender-kebap"
+    },
+    {
+      "index": 109,
+      "title": "Urfa Kebap",
+      "image_name": "urfa-kebap"
+    },
+    {
+      "index": 110,
+      "title": "Beyti Kebap",
+      "image_name": "beyti-kebap"
+    },
+    {
+      "index": 111,
+      "title": "Tavuk Şiş",
+      "image_name": "tavuk-sis"
+    },
+    {
+      "index": 112,
+      "title": "Kuzu Şiş",
+      "image_name": "kuzu-sis"
+    },
+    {
+      "index": 113,
+      "title": "Çoban Kavurma",
+      "image_name": "coban-kavurma"
+    },
+    {
+      "index": 114,
+      "title": "Saç Kavurma",
+      "image_name": "sac-kavurma"
+    },
+    {
+      "index": 115,
+      "title": "Testi Kebabı",
+      "image_name": "testi-kebabi"
+    },
+    {
+      "index": 116,
+      "title": "Kağıt Kebabı",
+      "image_name": "kagit-kebabi"
+    },
+    {
+      "index": 117,
+      "title": "Fırında Kuzu Tandır",
+      "image_name": "firinda-kuzu-tandir"
+    },
+    {
+      "index": 118,
+      "title": "Fırında Köfte Patates",
+      "image_name": "firinda-kofte-patates"
+    },
+    {
+      "index": 119,
+      "title": "Fırında Sebzeli Et",
+      "image_name": "firinda-sebzeli-et"
+    },
+    {
+      "index": 120,
+      "title": "Fırında Tavuk Baget",
+      "image_name": "firinda-tavuk-baget"
+    },
+    {
+      "index": 121,
+      "title": "Tepsi Kebabı",
+      "image_name": "tepsi-kebabi"
+    },
+    {
+      "index": 122,
+      "title": "Hasan Paşa Köfte",
+      "image_name": "hasan-pasa-kofte"
+    },
+    {
+      "index": 123,
+      "title": "Etli Biber Dolması",
+      "image_name": "etli-biber-dolmasi"
+    },
+    {
+      "index": 124,
+      "title": "Fırında Kıymalı Patlıcan Kebap",
+      "image_name": "firinda-kiymali-patlican-kebap"
+    },
+    {
+      "index": 125,
+      "title": "Glutensiz Kadınbudu Köfte (Glutensiz)",
+      "image_name": "glutensiz-kadinbudu-kofte"
+    },
+    {
+      "index": 126,
+      "title": "Glutensiz İzmir Köfte (Glutensiz)",
+      "image_name": "glutensiz-izmir-kofte"
+    },
+    {
+      "index": 127,
+      "title": "Glutensiz Tekirdağ Köfte (Glutensiz)",
+      "image_name": "glutensiz-tekirdag-kofte"
+    },
+    {
+      "index": 128,
+      "title": "Glutensiz Fırında Köfte (Glutensiz)",
+      "image_name": "glutensiz-firinda-kofte"
+    },
+    {
+      "index": 129,
+      "title": "Süt Ürünsüz İskender (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-iskender"
+    },
+    {
+      "index": 130,
+      "title": "Süt Ürünsüz Beyti Kebap (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-beyti-kebap"
+    },
+    {
+      "index": 131,
+      "title": "Süt Ürünsüz Orman Kebabı (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-orman-kebabi"
+    },
+    {
+      "index": 132,
+      "title": "Süt Ürünsüz Saç Kavurma (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-sac-kavurma"
+    },
+    {
+      "index": 133,
+      "title": "Vegan Sulu Köfte (Vegan)",
+      "image_name": "vegan-sulu-kofte"
+    },
+    {
+      "index": 134,
+      "title": "Vegan Etli Güveç (Vegan)",
+      "image_name": "vegan-etli-guvec"
+    },
+    {
+      "index": 135,
+      "title": "Vegan Tepsi Kebabı (Vegan)",
+      "image_name": "vegan-tepsi-kebabi"
+    },
+    {
+      "index": 136,
+      "title": "Vegan Biber Dolması (Vegan)",
+      "image_name": "vegan-biber-dolmasi"
+    },
+    {
+      "index": 137,
+      "title": "Vegan Fırında Sebzeli Kebap (Vegan & Glutensiz)",
+      "image_name": "vegan-firinda-sebzeli-kebap"
+    },
+    {
+      "index": 138,
+      "title": "Vegan Kapuska (Vegan)",
+      "image_name": "vegan-kapuska"
+    },
+    {
+      "index": 139,
+      "title": "Kuruyemişsiz Hasan Paşa Köfte (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-hasan-pasa-kofte"
+    },
+    {
+      "index": 140,
+      "title": "Glutensiz Sulu Köfte (Glutensiz)",
+      "image_name": "glutensiz-sulu-kofte"
+    },
+    {
+      "index": 141,
+      "title": "Glutensiz Etli Güveç (Glutensiz)",
+      "image_name": "glutensiz-etli-guvec"
+    },
+    {
+      "index": 142,
+      "title": "Süt Ürünsüz Fırında Kuzu Tandır (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-firinda-kuzu-tandir"
+    },
+    {
+      "index": 143,
+      "title": "Süt Ürünsüz Çoban Kavurma (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-coban-kavurma"
+    },
+    {
+      "index": 144,
+      "title": "Glutensiz Kağıt Kebabı (Glutensiz)",
+      "image_name": "glutensiz-kagit-kebabi"
+    },
+    {
+      "index": 145,
+      "title": "Vegan Kağıt Kebabı (Vegan & Glutensiz)",
+      "image_name": "vegan-kagit-kebabi"
+    },
+    {
+      "index": 146,
+      "title": "Glutensiz Tepsi Kebabı (Glutensiz)",
+      "image_name": "glutensiz-tepsi-kebabi"
+    },
+    {
+      "index": 147,
+      "title": "Süt Ürünsüz Tavuk Şiş (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-tavuk-sis"
+    },
+    {
+      "index": 148,
+      "title": "Vegan Şiş Kebap (Vegan & Glutensiz)",
+      "image_name": "vegan-sis-kebap"
+    },
+    {
+      "index": 149,
+      "title": "Glutensiz Dalyan Köfte (Glutensiz)",
+      "image_name": "glutensiz-dalyan-kofte"
+    },
+    {
+      "index": 150,
+      "title": "Tavuk Sote",
+      "image_name": "tavuk-sote"
+    },
+    {
+      "index": 151,
+      "title": "Fırında Tavuk Pirzola",
+      "image_name": "firinda-tavuk-pirzola"
+    },
+    {
+      "index": 152,
+      "title": "Tavuk Döner",
+      "image_name": "tavuk-doner"
+    },
+    {
+      "index": 153,
+      "title": "Kremalı Tavuk Makarna",
+      "image_name": "kremali-tavuk-makarna"
+    },
+    {
+      "index": 154,
+      "title": "Tavuk Tandır",
+      "image_name": "tavuk-tandir"
+    },
+    {
+      "index": 155,
+      "title": "Tavuk Pane",
+      "image_name": "tavuk-pane"
+    },
+    {
+      "index": 156,
+      "title": "Fırında Tavuk Kanat",
+      "image_name": "firinda-tavuk-kanat"
+    },
+    {
+      "index": 157,
+      "title": "Hindi Fırın",
+      "image_name": "hindi-firin"
+    },
+    {
+      "index": 158,
+      "title": "Tavuk Güveç",
+      "image_name": "tavuk-guvec"
+    },
+    {
+      "index": 159,
+      "title": "Hindi Sote",
+      "image_name": "hindi-sote"
+    },
+    {
+      "index": 160,
+      "title": "Hamsi Tava",
+      "image_name": "hamsi-tava"
+    },
+    {
+      "index": 161,
+      "title": "Fırında Somon",
+      "image_name": "firinda-somon"
+    },
+    {
+      "index": 162,
+      "title": "Karides Güveç",
+      "image_name": "karides-guvec"
+    },
+    {
+      "index": 163,
+      "title": "Tereyağlı Karides",
+      "image_name": "tereyagli-karides"
+    },
+    {
+      "index": 164,
+      "title": "Kalamar Tava",
+      "image_name": "kalamar-tava"
+    },
+    {
+      "index": 165,
+      "title": "Fırında Mezgit",
+      "image_name": "firinda-mezgit"
+    },
+    {
+      "index": 166,
+      "title": "Balık Buğulama",
+      "image_name": "balik-bugulama"
+    },
+    {
+      "index": 167,
+      "title": "Midye Dolma",
+      "image_name": "midye-dolma"
+    },
+    {
+      "index": 168,
+      "title": "Midye Tava",
+      "image_name": "midye-tava"
+    },
+    {
+      "index": 169,
+      "title": "Levrek Izgara",
+      "image_name": "levrek-izgara"
+    },
+    {
+      "index": 170,
+      "title": "Somon Izgara",
+      "image_name": "somon-izgara"
+    },
+    {
+      "index": 171,
+      "title": "Glutensiz Tavuk Pane (Glutensiz)",
+      "image_name": "glutensiz-tavuk-pane"
+    },
+    {
+      "index": 172,
+      "title": "Glutensiz Kalamar Tava (Glutensiz)",
+      "image_name": "glutensiz-kalamar-tava"
+    },
+    {
+      "index": 173,
+      "title": "Glutensiz Tavuk Sote (Glutensiz)",
+      "image_name": "glutensiz-tavuk-sote"
+    },
+    {
+      "index": 174,
+      "title": "Süt Ürünsüz Tavuk Sote (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-tavuk-sote"
+    },
+    {
+      "index": 175,
+      "title": "Süt Ürünsüz Kremalı Tavuk (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-kremali-tavuk"
+    },
+    {
+      "index": 176,
+      "title": "Süt Ürünsüz Karides Sote (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-karides-sote"
+    },
+    {
+      "index": 177,
+      "title": "Süt Ürünsüz Karides Güveç (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-karides-guvec"
+    },
+    {
+      "index": 178,
+      "title": "Süt Ürünsüz Hindi Fırın (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-hindi-firin"
+    },
+    {
+      "index": 179,
+      "title": "Glutensiz Midye Tava (Glutensiz)",
+      "image_name": "glutensiz-midye-tava"
+    },
+    {
+      "index": 180,
+      "title": "Glutensiz Fırında Somon (Glutensiz)",
+      "image_name": "glutensiz-firinda-somon"
+    },
+    {
+      "index": 181,
+      "title": "Süt Ürünsüz Tavuk Döner (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-tavuk-doner"
+    },
+    {
+      "index": 182,
+      "title": "Kuruyemişsiz Midye Dolma (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-midye-dolma"
+    },
+    {
+      "index": 183,
+      "title": "Vegan Soya Tavuk Sote (Vegan)",
+      "image_name": "vegan-soya-tavuk-sote"
+    },
+    {
+      "index": 184,
+      "title": "Vegan Mantarlı Kalamar (Vegan)",
+      "image_name": "vegan-mantarli-kalamar"
+    },
+    {
+      "index": 185,
+      "title": "Vegan Tofu Balık (Vegan & Glutensiz)",
+      "image_name": "vegan-tofu-balik"
+    },
+    {
+      "index": 186,
+      "title": "Vegan Soya Tavuk Güveç (Vegan)",
+      "image_name": "vegan-soya-tavuk-guvec"
+    },
+    {
+      "index": 187,
+      "title": "Vegan Mantar Döner (Vegan)",
+      "image_name": "vegan-mantar-doner"
+    },
+    {
+      "index": 188,
+      "title": "Vegan Karides Güveç (Vegan)",
+      "image_name": "vegan-karides-guvec"
+    },
+    {
+      "index": 189,
+      "title": "Vejetaryen Balık Buğulama (Vejetaryen)",
+      "image_name": "vejetaryen-balik-bugulama"
+    },
+    {
+      "index": 190,
+      "title": "Glutensiz Tavuk Güveç (Glutensiz)",
+      "image_name": "glutensiz-tavuk-guvec"
+    },
+    {
+      "index": 191,
+      "title": "Glutensiz Hamsi Tava (Glutensiz)",
+      "image_name": "glutensiz-hamsi-tava"
+    },
+    {
+      "index": 192,
+      "title": "Fırında Palamut",
+      "image_name": "firinda-palamut"
+    },
+    {
+      "index": 193,
+      "title": "Balık Köfte",
+      "image_name": "balik-kofte"
+    },
+    {
+      "index": 194,
+      "title": "Tavuklu Pilav",
+      "image_name": "tavuklu-pilav"
+    },
+    {
+      "index": 195,
+      "title": "Fırında Tavuk Sarma",
+      "image_name": "firinda-tavuk-sarma"
+    },
+    {
+      "index": 196,
+      "title": "Glutensiz Balık Köfte (Glutensiz)",
+      "image_name": "glutensiz-balik-kofte"
+    },
+    {
+      "index": 197,
+      "title": "Vegan Mantarlı Tandır (Vegan)",
+      "image_name": "vegan-mantarli-tandir"
+    },
+    {
+      "index": 198,
+      "title": "Süt Ürünsüz Tavuk Tandır (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-tavuk-tandir"
+    },
+    {
+      "index": 199,
+      "title": "Vegan Fırında Tofu Somon (Vegan & Glutensiz)",
+      "image_name": "vegan-firinda-tofu-somon"
+    },
+    {
+      "index": 200,
+      "title": "Peynirli Poğaça",
+      "image_name": "peynirli-pogaca"
+    },
+    {
+      "index": 201,
+      "title": "Patatesli Poğaça",
+      "image_name": "patatesli-pogaca"
+    },
+    {
+      "index": 202,
+      "title": "Açma",
+      "image_name": "acma"
+    },
+    {
+      "index": 203,
+      "title": "Simit",
+      "image_name": "simit"
+    },
+    {
+      "index": 204,
+      "title": "Su Böreği",
+      "image_name": "su-boregi"
+    },
+    {
+      "index": 205,
+      "title": "Sigara Böreği",
+      "image_name": "sigara-boregi"
+    },
+    {
+      "index": 206,
+      "title": "Kol Böreği",
+      "image_name": "kol-boregi"
+    },
+    {
+      "index": 207,
+      "title": "Ispanaklı Börek",
+      "image_name": "ispanakli-borek"
+    },
+    {
+      "index": 208,
+      "title": "Kıymalı Pide",
+      "image_name": "kiymali-pide"
+    },
+    {
+      "index": 209,
+      "title": "Kuşbaşılı Pide",
+      "image_name": "kusbasili-pide"
+    },
+    {
+      "index": 210,
+      "title": "Kaşarlı Pide",
+      "image_name": "kasarli-pide"
+    },
+    {
+      "index": 211,
+      "title": "Gözleme",
+      "image_name": "gozleme"
+    },
+    {
+      "index": 212,
+      "title": "Kıymalı Mantı",
+      "image_name": "kiymali-manti"
+    },
+    {
+      "index": 213,
+      "title": "Tepsi Böreği",
+      "image_name": "tepsi-boregi"
+    },
+    {
+      "index": 214,
+      "title": "Glutensiz Peynirli Poğaça (Glutensiz)",
+      "image_name": "glutensiz-peynirli-pogaca"
+    },
+    {
+      "index": 215,
+      "title": "Glutensiz Patatesli Poğaça (Glutensiz)",
+      "image_name": "glutensiz-patatesli-pogaca"
+    },
+    {
+      "index": 216,
+      "title": "Vegan Patatesli Poğaça (Vegan)",
+      "image_name": "vegan-patatesli-pogaca"
+    },
+    {
+      "index": 217,
+      "title": "Vegan Sigara Böreği (Vegan)",
+      "image_name": "vegan-sigara-boregi"
+    },
+    {
+      "index": 218,
+      "title": "Glutensiz Sigara Böreği (Glutensiz)",
+      "image_name": "glutensiz-sigara-boregi"
+    },
+    {
+      "index": 219,
+      "title": "Glutensiz Ispanaklı Börek (Glutensiz)",
+      "image_name": "glutensiz-ispanakli-borek"
+    },
+    {
+      "index": 220,
+      "title": "Süt Ürünsüz Kol Böreği (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-kol-boregi"
+    },
+    {
+      "index": 221,
+      "title": "Vegan Kol Böreği (Vegan)",
+      "image_name": "vegan-kol-boregi"
+    },
+    {
+      "index": 222,
+      "title": "Glutensiz Kıymalı Pide (Glutensiz)",
+      "image_name": "glutensiz-kiymali-pide"
+    },
+    {
+      "index": 223,
+      "title": "Vegan Lahmacun (Vegan)",
+      "image_name": "vegan-lahmacun"
+    },
+    {
+      "index": 224,
+      "title": "Glutensiz Vegan Lahmacun (Glutensiz & Vegan)",
+      "image_name": "glutensiz-vegan-lahmacun"
+    },
+    {
+      "index": 225,
+      "title": "Vegan Mantı (Vegan)",
+      "image_name": "vegan-manti"
+    },
+    {
+      "index": 226,
+      "title": "Glutensiz Mantı (Glutensiz)",
+      "image_name": "glutensiz-manti"
+    },
+    {
+      "index": 227,
+      "title": "Glutensiz Simit (Glutensiz)",
+      "image_name": "glutensiz-simit"
+    },
+    {
+      "index": 228,
+      "title": "Vegan Simit (Vegan)",
+      "image_name": "vegan-simit"
+    },
+    {
+      "index": 229,
+      "title": "Süt Ürünsüz Gözleme (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-gozleme"
+    },
+    {
+      "index": 230,
+      "title": "Vegan Gözleme (Vegan)",
+      "image_name": "vegan-gozleme"
+    },
+    {
+      "index": 231,
+      "title": "Glutensiz Gözleme (Glutensiz)",
+      "image_name": "glutensiz-gozleme"
+    },
+    {
+      "index": 232,
+      "title": "Vegan Su Böreği (Vegan)",
+      "image_name": "vegan-su-boregi"
+    },
+    {
+      "index": 233,
+      "title": "Glutensiz Su Böreği (Glutensiz)",
+      "image_name": "glutensiz-su-boregi"
+    },
+    {
+      "index": 234,
+      "title": "Glutensiz Açma (Glutensiz)",
+      "image_name": "glutensiz-acma"
+    },
+    {
+      "index": 235,
+      "title": "Vegan Açma (Vegan)",
+      "image_name": "vegan-acma"
+    },
+    {
+      "index": 236,
+      "title": "Vegan Tepsi Böreği (Vegan)",
+      "image_name": "vegan-tepsi-boregi"
+    },
+    {
+      "index": 237,
+      "title": "Süt Ürünsüz Kaşarlı Pide (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-kasarli-pide"
+    },
+    {
+      "index": 238,
+      "title": "Glutensiz Kaşarlı Pide (Glutensiz)",
+      "image_name": "glutensiz-kasarli-pide"
+    },
+    {
+      "index": 239,
+      "title": "Glutensiz Vegan Mantı (Glutensiz & Vegan)",
+      "image_name": "glutensiz-vegan-manti"
+    },
+    {
+      "index": 240,
+      "title": "Glutensiz Kol Böreği (Glutensiz)",
+      "image_name": "glutensiz-kol-boregi"
+    },
+    {
+      "index": 241,
+      "title": "Vegan Pide (Vegan)",
+      "image_name": "vegan-pide"
+    },
+    {
+      "index": 242,
+      "title": "Çiğ Börek",
+      "image_name": "cig-borek"
+    },
+    {
+      "index": 243,
+      "title": "Zeytinli Poğaça",
+      "image_name": "zeytinli-pogaca"
+    },
+    {
+      "index": 244,
+      "title": "Peynirli Gözleme",
+      "image_name": "peynirli-gozleme"
+    },
+    {
+      "index": 245,
+      "title": "Karadeniz Pidesi",
+      "image_name": "karadeniz-pidesi"
+    },
+    {
+      "index": 246,
+      "title": "Glutensiz Çiğ Börek (Glutensiz)",
+      "image_name": "glutensiz-cig-borek"
+    },
+    {
+      "index": 247,
+      "title": "Vegan Zeytinli Poğaça (Vegan)",
+      "image_name": "vegan-zeytinli-pogaca"
+    },
+    {
+      "index": 248,
+      "title": "Glutensiz Tepsi Böreği (Glutensiz)",
+      "image_name": "glutensiz-tepsi-boregi"
+    },
+    {
+      "index": 249,
+      "title": "Süt Ürünsüz Peynirli Poğaça (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-peynirli-pogaca"
+    },
+    {
+      "index": 250,
+      "title": "Tereyağlı Pirinç Pilavı",
+      "image_name": "tereyagli-pirinc-pilavi"
+    },
+    {
+      "index": 251,
+      "title": "Bulgur Pilavı",
+      "image_name": "bulgur-pilavi"
+    },
+    {
+      "index": 252,
+      "title": "Firik Pilavı",
+      "image_name": "firik-pilavi"
+    },
+    {
+      "index": 253,
+      "title": "İç Pilav",
+      "image_name": "ic-pilav"
+    },
+    {
+      "index": 254,
+      "title": "Nohutlu Pirinç Pilavı",
+      "image_name": "nohutlu-pirinc-pilavi"
+    },
+    {
+      "index": 255,
+      "title": "Domatesli Bulgur Pilavı",
+      "image_name": "domatesli-bulgur-pilavi"
+    },
+    {
+      "index": 256,
+      "title": "Meyhane Pilavı",
+      "image_name": "meyhane-pilavi"
+    },
+    {
+      "index": 257,
+      "title": "Maklube",
+      "image_name": "maklube"
+    },
+    {
+      "index": 258,
+      "title": "Etli Nohut",
+      "image_name": "etli-nohut-yemegi"
+    },
+    {
+      "index": 259,
+      "title": "Etli Kuru Fasulye",
+      "image_name": "etli-kuru-fasulye-tencere"
+    },
+    {
+      "index": 260,
+      "title": "Barbunya Pilaki",
+      "image_name": "barbunya-pilaki"
+    },
+    {
+      "index": 261,
+      "title": "Fava",
+      "image_name": "fava"
+    },
+    {
+      "index": 262,
+      "title": "Fellah Köftesi",
+      "image_name": "fellah-koftesi"
+    },
+    {
+      "index": 263,
+      "title": "Nohut Köftesi",
+      "image_name": "nohut-koftesi"
+    },
+    {
+      "index": 264,
+      "title": "Yeşil Mercimek Yemeği",
+      "image_name": "yesil-mercimek-yemegi"
+    },
+    {
+      "index": 265,
+      "title": "Börülce Salatası",
+      "image_name": "borulce-salatasi"
+    },
+    {
+      "index": 266,
+      "title": "Kuru Bamya",
+      "image_name": "kuru-bamya"
+    },
+    {
+      "index": 267,
+      "title": "Sade Pirinç Pilavı",
+      "image_name": "sade-pirinc-pilavi"
+    },
+    {
+      "index": 268,
+      "title": "Mercimek Köftesi",
+      "image_name": "mercimek-koftesi"
+    },
+    {
+      "index": 269,
+      "title": "Vegan Pirinç Pilavı (Vegan & Glutensiz)",
+      "image_name": "vegan-pirinc-pilavi"
+    },
+    {
+      "index": 270,
+      "title": "Süt Ürünsüz Şehriyeli Pilav (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-sehriyeli-pilav"
+    },
+    {
+      "index": 271,
+      "title": "Glutensiz Pirinç Pilavı (Glutensiz)",
+      "image_name": "glutensiz-pirinc-pilavi"
+    },
+    {
+      "index": 272,
+      "title": "Glutensiz Kinoa Pilavı (Glutensiz & Vegan)",
+      "image_name": "glutensiz-kinoa-pilavi"
+    },
+    {
+      "index": 273,
+      "title": "Glutensiz Karabuğday Pilavı (Glutensiz)",
+      "image_name": "glutensiz-karabugday-pilavi"
+    },
+    {
+      "index": 274,
+      "title": "Vegan Bulgur Pilavı (Vegan)",
+      "image_name": "vegan-bulgur-pilavi"
+    },
+    {
+      "index": 275,
+      "title": "Vegan Domatesli Bulgur Pilavı (Vegan)",
+      "image_name": "vegan-domatesli-bulgur-pilavi"
+    },
+    {
+      "index": 276,
+      "title": "Süt Ürünsüz Nohutlu Pilav (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-nohutlu-pilav"
+    },
+    {
+      "index": 277,
+      "title": "Vegan Nohut Yemeği (Vegan & Glutensiz)",
+      "image_name": "vegan-nohut-pilaki"
+    },
+    {
+      "index": 278,
+      "title": "Vegan Kuru Fasulye (Vegan & Glutensiz)",
+      "image_name": "vegan-kuru-fasulye-tencere"
+    },
+    {
+      "index": 279,
+      "title": "Vegan Barbunya Pilaki (Vegan & Glutensiz)",
+      "image_name": "vegan-barbunya-pilaki"
+    },
+    {
+      "index": 280,
+      "title": "Glutensiz Fellah Köftesi (Glutensiz & Vegan)",
+      "image_name": "glutensiz-fellah-koftesi"
+    },
+    {
+      "index": 281,
+      "title": "Glutensiz Nohut Köftesi (Glutensiz & Vegan)",
+      "image_name": "glutensiz-nohut-koftesi"
+    },
+    {
+      "index": 282,
+      "title": "Vegan Fava (Vegan & Glutensiz)",
+      "image_name": "vegan-fava"
+    },
+    {
+      "index": 283,
+      "title": "Vegan Yeşil Mercimek (Vegan & Glutensiz)",
+      "image_name": "vegan-yesil-mercimek"
+    },
+    {
+      "index": 284,
+      "title": "Vegan Kuru Bamya (Vegan & Glutensiz)",
+      "image_name": "vegan-kuru-bamya"
+    },
+    {
+      "index": 285,
+      "title": "Vegan Maklube (Vegan & Glutensiz)",
+      "image_name": "vegan-maklube"
+    },
+    {
+      "index": 286,
+      "title": "Süt Ürünsüz Meyhane Pilavı (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-meyhane-pilavi"
+    },
+    {
+      "index": 287,
+      "title": "Glutensiz Mercimek Köftesi (Glutensiz & Vegan)",
+      "image_name": "glutensiz-mercimek-koftesi"
+    },
+    {
+      "index": 288,
+      "title": "Vegan Firik Pilavı (Vegan)",
+      "image_name": "vegan-firik-pilavi"
+    },
+    {
+      "index": 289,
+      "title": "Kuruyemişsiz İç Pilav (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-ic-pilav"
+    },
+    {
+      "index": 290,
+      "title": "Süt Ürünsüz Firik Pilavı (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-firik-pilavi"
+    },
+    {
+      "index": 291,
+      "title": "Glutensiz Vegan Kinoa Tabbule (Glutensiz & Vegan)",
+      "image_name": "glutensiz-kinoa-tabbule"
+    },
+    {
+      "index": 292,
+      "title": "Patlıcanlı Pilav",
+      "image_name": "patlicanli-pilav"
+    },
+    {
+      "index": 293,
+      "title": "Etli Bezelye",
+      "image_name": "etli-bezelye"
+    },
+    {
+      "index": 294,
+      "title": "Nohutlu Bulgur Pilavı",
+      "image_name": "nohutlu-bulgur-pilavi"
+    },
+    {
+      "index": 295,
+      "title": "Kıymalı Bulgur Pilavı",
+      "image_name": "kiymali-bulgur-pilavi"
+    },
+    {
+      "index": 296,
+      "title": "Vegan Patlıcanlı Pilav (Vegan)",
+      "image_name": "vegan-patlicanli-pilav"
+    },
+    {
+      "index": 297,
+      "title": "Vegan Bezelye Yemeği (Vegan & Glutensiz)",
+      "image_name": "vegan-bezelye-yemegi"
+    },
+    {
+      "index": 298,
+      "title": "Glutensiz Nohutlu Kinoa Pilavı (Glutensiz & Vegan)",
+      "image_name": "glutensiz-nohutlu-kinoa-pilavi"
+    },
+    {
+      "index": 299,
+      "title": "Süt Ürünsüz Bulgur Pilavı (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-bulgur-pilavi"
+    },
+    {
+      "index": 300,
+      "title": "Muhallebi",
+      "image_name": "muhallebi"
+    },
+    {
+      "index": 301,
+      "title": "Kazandibi",
+      "image_name": "kazandibi"
+    },
+    {
+      "index": 302,
+      "title": "Keşkül",
+      "image_name": "keskul"
+    },
+    {
+      "index": 303,
+      "title": "Güllaç",
+      "image_name": "gullac"
+    },
+    {
+      "index": 304,
+      "title": "Supangle",
+      "image_name": "supangle"
+    },
+    {
+      "index": 305,
+      "title": "Tavuk Göğsü Tatlısı",
+      "image_name": "tavuk-gogsu-tatlisi"
+    },
+    {
+      "index": 306,
+      "title": "Trileçe",
+      "image_name": "trilece"
+    },
+    {
+      "index": 307,
+      "title": "Profiterol",
+      "image_name": "profiterol"
+    },
+    {
+      "index": 308,
+      "title": "Dondurma",
+      "image_name": "dondurma"
+    },
+    {
+      "index": 309,
+      "title": "Magnolya Tatlısı",
+      "image_name": "magnolya-tatlisi"
+    },
+    {
+      "index": 310,
+      "title": "Panna Cotta",
+      "image_name": "panna-cotta"
+    },
+    {
+      "index": 311,
+      "title": "Sütlü İrmik Tatlısı",
+      "image_name": "sutlu-irmik-tatlisi"
+    },
+    {
+      "index": 312,
+      "title": "Sakızlı Muhallebi",
+      "image_name": "sakizli-muhallebi"
+    },
+    {
+      "index": 313,
+      "title": "Fırında Sütlaç",
+      "image_name": "firinda-sutlac"
+    },
+    {
+      "index": 314,
+      "title": "Vegan Muhallebi (Vegan & Glutensiz)",
+      "image_name": "vegan-muhallebi"
+    },
+    {
+      "index": 315,
+      "title": "Vegan Kazandibi (Vegan)",
+      "image_name": "vegan-kazandibi"
+    },
+    {
+      "index": 316,
+      "title": "Vegan Keşkül (Vegan & Glutensiz)",
+      "image_name": "vegan-keskul"
+    },
+    {
+      "index": 317,
+      "title": "Laktozsuz Güllaç (Süt Ürünü Yok)",
+      "image_name": "laktozsuz-gullac"
+    },
+    {
+      "index": 318,
+      "title": "Vegan Supangle (Vegan & Glutensiz)",
+      "image_name": "vegan-supangle"
+    },
+    {
+      "index": 319,
+      "title": "Vejetaryen Yalancı Tavuk Göğsü (Vejetaryen & Glutensiz)",
+      "image_name": "vejetaryen-yalanci-tavuk-gogsu"
+    },
+    {
+      "index": 320,
+      "title": "Vegan Yalancı Tavuk Göğsü (Vegan & Glutensiz)",
+      "image_name": "vegan-yalanci-tavuk-gogsu"
+    },
+    {
+      "index": 321,
+      "title": "Süt Ürünsüz Trileçe (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-trilece"
+    },
+    {
+      "index": 322,
+      "title": "Vegan Dondurma (Vegan & Glutensiz)",
+      "image_name": "vegan-dondurma"
+    },
+    {
+      "index": 323,
+      "title": "Vegan Magnolya (Vegan)",
+      "image_name": "vegan-magnolya"
+    },
+    {
+      "index": 324,
+      "title": "Glutensiz Muhallebi (Glutensiz)",
+      "image_name": "glutensiz-muhallebi"
+    },
+    {
+      "index": 325,
+      "title": "Glutensiz Supangle (Glutensiz)",
+      "image_name": "glutensiz-supangle"
+    },
+    {
+      "index": 326,
+      "title": "Kuruyemişsiz Güllaç (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-gullac"
+    },
+    {
+      "index": 327,
+      "title": "Kuruyemişsiz Keşkül (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-keskul"
+    },
+    {
+      "index": 328,
+      "title": "Süt Ürünsüz Sakızlı Muhallebi (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-sakizli-muhallebi"
+    },
+    {
+      "index": 329,
+      "title": "Vegan Güllaç (Vegan)",
+      "image_name": "vegan-gullac"
+    },
+    {
+      "index": 330,
+      "title": "Süt Ürünsüz Fırında Sütlaç (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-firinda-sutlac"
+    },
+    {
+      "index": 331,
+      "title": "Vegan Profiterol (Vegan)",
+      "image_name": "vegan-profiterol"
+    },
+    {
+      "index": 332,
+      "title": "Süt Ürünsüz Dondurma (Süt Ürünü Yok & Glutensiz)",
+      "image_name": "sut-urunsuz-dondurma"
+    },
+    {
+      "index": 333,
+      "title": "Glutensiz Kazandibi (Glutensiz)",
+      "image_name": "glutensiz-kazandibi"
+    },
+    {
+      "index": 334,
+      "title": "Glutensiz Trileçe (Glutensiz)",
+      "image_name": "glutensiz-trilece"
+    },
+    {
+      "index": 335,
+      "title": "Vegan Sütlaç (Vegan & Glutensiz)",
+      "image_name": "vegan-sutlac-tatli"
+    },
+    {
+      "index": 336,
+      "title": "Vegan Panna Cotta (Vegan & Glutensiz)",
+      "image_name": "vegan-panna-cotta"
+    },
+    {
+      "index": 337,
+      "title": "Süt Ürünsüz Magnolya (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-magnolya"
+    },
+    {
+      "index": 338,
+      "title": "Glutensiz Sütlü İrmik Tatlısı (Glutensiz)",
+      "image_name": "glutensiz-sutlu-irmik-tatlisi"
+    },
+    {
+      "index": 339,
+      "title": "Vegan Çikolatalı Mus (Vegan & Glutensiz)",
+      "image_name": "vegan-cikolatali-mus"
+    },
+    {
+      "index": 340,
+      "title": "Glutensiz Fırında Sütlaç (Glutensiz)",
+      "image_name": "glutensiz-firinda-sutlac"
+    },
+    {
+      "index": 341,
+      "title": "Vegan Meyveli Dondurma (Vegan & Glutensiz)",
+      "image_name": "vegan-meyveli-dondurma"
+    },
+    {
+      "index": 342,
+      "title": "Süt Ürünsüz Profiterol (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-profiterol"
+    },
+    {
+      "index": 343,
+      "title": "Aşure",
+      "image_name": "asure"
+    },
+    {
+      "index": 344,
+      "title": "Çikolatalı Sufle",
+      "image_name": "cikolatali-sufle"
+    },
+    {
+      "index": 345,
+      "title": "Keskül-i Fükaralı",
+      "image_name": "keskul-i-fukarali"
+    },
+    {
+      "index": 346,
+      "title": "Çilekli Dondurma",
+      "image_name": "cilekli-dondurma"
+    },
+    {
+      "index": 347,
+      "title": "Vegan Aşure (Vegan)",
+      "image_name": "vegan-asure"
+    },
+    {
+      "index": 348,
+      "title": "Vegan Çikolatalı Sufle (Vegan & Glutensiz)",
+      "image_name": "vegan-cikolatali-sufle"
+    },
+    {
+      "index": 349,
+      "title": "Süt Ürünsüz Çilekli Dondurma (Süt Ürünü Yok & Glutensiz)",
+      "image_name": "sut-urunsuz-cilekli-dondurma"
+    },
+    {
+      "index": 350,
+      "title": "Antep Baklavası",
+      "image_name": "antep-baklavasi"
+    },
+    {
+      "index": 351,
+      "title": "Kadayıf",
+      "image_name": "kadayif"
+    },
+    {
+      "index": 352,
+      "title": "Şekerpare",
+      "image_name": "sekerpare"
+    },
+    {
+      "index": 353,
+      "title": "Revani",
+      "image_name": "revani"
+    },
+    {
+      "index": 354,
+      "title": "Tulumba Tatlısı",
+      "image_name": "tulumba-tatlisi"
+    },
+    {
+      "index": 355,
+      "title": "Lokma Tatlısı",
+      "image_name": "lokma-tatlisi"
+    },
+    {
+      "index": 356,
+      "title": "Künefe",
+      "image_name": "kunefe"
+    },
+    {
+      "index": 357,
+      "title": "Kalburabastı",
+      "image_name": "kalburabasti"
+    },
+    {
+      "index": 358,
+      "title": "Ekmek Kadayıfı",
+      "image_name": "ekmek-kadayifi"
+    },
+    {
+      "index": 359,
+      "title": "Irmik Helvası",
+      "image_name": "irmik-helvasi"
+    },
+    {
+      "index": 360,
+      "title": "Un Helvası",
+      "image_name": "un-helvasi"
+    },
+    {
+      "index": 361,
+      "title": "Islak Kek",
+      "image_name": "islak-kek"
+    },
+    {
+      "index": 362,
+      "title": "Havuçlu Tarçınlı Kek",
+      "image_name": "havuclu-tarcinli-kek"
+    },
+    {
+      "index": 363,
+      "title": "Un Kurabiyesi",
+      "image_name": "un-kurabiyesi"
+    },
+    {
+      "index": 364,
+      "title": "Mozaik Pasta",
+      "image_name": "mozaik-pasta"
+    },
+    {
+      "index": 365,
+      "title": "Limonlu Kek",
+      "image_name": "limonlu-kek"
+    },
+    {
+      "index": 366,
+      "title": "Kuruyemişsiz Sade Baklava (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-sade-baklava"
+    },
+    {
+      "index": 367,
+      "title": "Kuruyemişsiz Kadayıf (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-kadayif"
+    },
+    {
+      "index": 368,
+      "title": "Kuruyemişsiz Künefe (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-kunefe"
+    },
+    {
+      "index": 369,
+      "title": "Kuruyemişsiz Şekerpare (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-sekerpare"
+    },
+    {
+      "index": 370,
+      "title": "Kuruyemişsiz Kalburabastı (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-kalburabasti"
+    },
+    {
+      "index": 371,
+      "title": "Kuruyemişsiz İrmik Helvası (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-irmik-helvasi"
+    },
+    {
+      "index": 372,
+      "title": "Glutensiz Şekerpare (Glutensiz)",
+      "image_name": "glutensiz-sekerpare"
+    },
+    {
+      "index": 373,
+      "title": "Glutensiz Revani (Glutensiz)",
+      "image_name": "glutensiz-revani"
+    },
+    {
+      "index": 374,
+      "title": "Glutensiz Islak Kek (Glutensiz)",
+      "image_name": "glutensiz-islak-kek"
+    },
+    {
+      "index": 375,
+      "title": "Glutensiz Havuçlu Kek (Glutensiz)",
+      "image_name": "glutensiz-havuclu-kek"
+    },
+    {
+      "index": 376,
+      "title": "Vegan Revani (Vegan)",
+      "image_name": "vegan-revani"
+    },
+    {
+      "index": 377,
+      "title": "Vegan Islak Kek (Vegan)",
+      "image_name": "vegan-islak-kek"
+    },
+    {
+      "index": 378,
+      "title": "Vegan Lokma (Vegan)",
+      "image_name": "vegan-lokma"
+    },
+    {
+      "index": 379,
+      "title": "Vegan Un Helvası (Vegan)",
+      "image_name": "vegan-un-helvasi"
+    },
+    {
+      "index": 380,
+      "title": "Vegan Limonlu Kek (Vegan)",
+      "image_name": "vegan-limonlu-kek"
+    },
+    {
+      "index": 381,
+      "title": "Vegan Un Kurabiyesi (Vegan)",
+      "image_name": "vegan-un-kurabiyesi"
+    },
+    {
+      "index": 382,
+      "title": "Vegan Mozaik Pasta (Vegan)",
+      "image_name": "vegan-mozaik-pasta"
+    },
+    {
+      "index": 383,
+      "title": "Süt Ürünsüz Baklava (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-baklava"
+    },
+    {
+      "index": 384,
+      "title": "Süt Ürünsüz Kadayıf (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-kadayif"
+    },
+    {
+      "index": 385,
+      "title": "Süt Ürünsüz Şekerpare (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-sekerpare"
+    },
+    {
+      "index": 386,
+      "title": "Süt Ürünsüz Islak Kek (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-islak-kek"
+    },
+    {
+      "index": 387,
+      "title": "Süt Ürünsüz İrmik Helvası (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-irmik-helvasi"
+    },
+    {
+      "index": 388,
+      "title": "Glutensiz Vegan Revani (Glutensiz & Vegan)",
+      "image_name": "glutensiz-vegan-revani"
+    },
+    {
+      "index": 389,
+      "title": "Glutensiz Vegan Islak Kek (Glutensiz & Vegan)",
+      "image_name": "glutensiz-vegan-islak-kek"
+    },
+    {
+      "index": 390,
+      "title": "Glutensiz Un Kurabiyesi (Glutensiz)",
+      "image_name": "glutensiz-un-kurabiyesi"
+    },
+    {
+      "index": 391,
+      "title": "Vegan Havuçlu Kek (Vegan)",
+      "image_name": "vegan-havuclu-kek"
+    },
+    {
+      "index": 392,
+      "title": "Sobiyet",
+      "image_name": "sobiyet"
+    },
+    {
+      "index": 393,
+      "title": "Cevizli Kek",
+      "image_name": "cevizli-kek"
+    },
+    {
+      "index": 394,
+      "title": "Kabak Tatlısı",
+      "image_name": "kabak-tatlisi"
+    },
+    {
+      "index": 395,
+      "title": "Kemalpaşa Tatlısı",
+      "image_name": "kemalpasa-tatlisi"
+    },
+    {
+      "index": 396,
+      "title": "Kuruyemişsiz Ekmek Kadayıfı (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-ekmek-kadayifi"
+    },
+    {
+      "index": 397,
+      "title": "Glutensiz Limonlu Kek (Glutensiz)",
+      "image_name": "glutensiz-limonlu-kek"
+    },
+    {
+      "index": 398,
+      "title": "Süt Ürünsüz Künefe (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-kunefe"
+    },
+    {
+      "index": 399,
+      "title": "Vegan Kabak Tatlısı (Vegan & Glutensiz)",
+      "image_name": "vegan-kabak-tatlisi"
+    },
+    {
+      "index": 400,
+      "title": "Kokoreç",
+      "image_name": "kokorec"
+    },
+    {
+      "index": 401,
+      "title": "Sokak Midye Dolma",
+      "image_name": "sokak-midye-dolma"
+    },
+    {
+      "index": 402,
+      "title": "Islak Hamburger",
+      "image_name": "islak-hamburger"
+    },
+    {
+      "index": 403,
+      "title": "Tantuni",
+      "image_name": "tantuni"
+    },
+    {
+      "index": 404,
+      "title": "Kumpir",
+      "image_name": "kumpir"
+    },
+    {
+      "index": 405,
+      "title": "Döner Dürüm",
+      "image_name": "doner-durum"
+    },
+    {
+      "index": 406,
+      "title": "Balık Ekmek",
+      "image_name": "balik-ekmek"
+    },
+    {
+      "index": 407,
+      "title": "Kahvaltı Menemen",
+      "image_name": "kahvalti-menemen"
+    },
+    {
+      "index": 408,
+      "title": "Kuymak",
+      "image_name": "kuymak"
+    },
+    {
+      "index": 409,
+      "title": "Pişi",
+      "image_name": "pisi"
+    },
+    {
+      "index": 410,
+      "title": "Sucuklu Yumurta",
+      "image_name": "sucuklu-yumurta"
+    },
+    {
+      "index": 411,
+      "title": "Poşe Yumurtalı Çılbır",
+      "image_name": "pose-yumurtali-cilbir"
+    },
+    {
+      "index": 412,
+      "title": "Sokak Simidi",
+      "image_name": "sokak-simidi"
+    },
+    {
+      "index": 413,
+      "title": "Vegan Kokoreç (Vegan)",
+      "image_name": "vegan-kokorec"
+    },
+    {
+      "index": 414,
+      "title": "Vegan Midye Dolma (Vegan)",
+      "image_name": "vegan-midye-dolma"
+    },
+    {
+      "index": 415,
+      "title": "Vegan Tantuni (Vegan)",
+      "image_name": "vegan-tantuni"
+    },
+    {
+      "index": 416,
+      "title": "Vegan Kumpir (Vegan & Glutensiz)",
+      "image_name": "vegan-kumpir"
+    },
+    {
+      "index": 417,
+      "title": "Tofulu Vegan Menemen (Vegan & Glutensiz)",
+      "image_name": "tofulu-vegan-menemen"
+    },
+    {
+      "index": 418,
+      "title": "Vegan Kuymak (Vegan & Glutensiz)",
+      "image_name": "vegan-kuymak"
+    },
+    {
+      "index": 419,
+      "title": "Glutensiz Pişi (Glutensiz)",
+      "image_name": "glutensiz-pisi"
+    },
+    {
+      "index": 420,
+      "title": "Glutensiz Islak Hamburger (Glutensiz)",
+      "image_name": "glutensiz-islak-hamburger"
+    },
+    {
+      "index": 421,
+      "title": "Süt Ürünsüz Kumpir (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-kumpir"
+    },
+    {
+      "index": 422,
+      "title": "Süt Ürünsüz Kuymak (Süt Ürünü Yok & Glutensiz)",
+      "image_name": "sut-urunsuz-kuymak"
+    },
+    {
+      "index": 423,
+      "title": "Süt Ürünsüz Çılbır (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-cilbir"
+    },
+    {
+      "index": 424,
+      "title": "Vejetaryen Menemen (Vejetaryen)",
+      "image_name": "vejetaryen-menemen"
+    },
+    {
+      "index": 425,
+      "title": "Vegan Pişi (Vegan)",
+      "image_name": "vegan-pisi"
+    },
+    {
+      "index": 426,
+      "title": "Vegan Susamlı Simit (Vegan)",
+      "image_name": "vegan-susamli-simit"
+    },
+    {
+      "index": 427,
+      "title": "Glutensiz Susamlı Simit (Glutensiz)",
+      "image_name": "glutensiz-susamli-simit"
+    },
+    {
+      "index": 428,
+      "title": "Vegan Islak Hamburger (Vegan)",
+      "image_name": "vegan-islak-hamburger"
+    },
+    {
+      "index": 429,
+      "title": "Süt Ürünsüz Sucuklu Yumurta (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-sucuklu-yumurta"
+    },
+    {
+      "index": 430,
+      "title": "Adana Dürüm",
+      "image_name": "adana-durum"
+    },
+    {
+      "index": 431,
+      "title": "Çiğ Köfte Dürüm",
+      "image_name": "cig-kofte-durum"
+    },
+    {
+      "index": 432,
+      "title": "Dürüm Döner",
+      "image_name": "durum-doner"
+    },
+    {
+      "index": 433,
+      "title": "Kaşarlı Tost",
+      "image_name": "kasarli-tost"
+    },
+    {
+      "index": 434,
+      "title": "Sokak Usulü Acılı Ezme",
+      "image_name": "sokak-usulu-acili-ezme"
+    },
+    {
+      "index": 435,
+      "title": "Sahanda Yumurta",
+      "image_name": "sahanda-yumurta"
+    },
+    {
+      "index": 436,
+      "title": "Peynirli Pide",
+      "image_name": "peynirli-pide"
+    },
+    {
+      "index": 437,
+      "title": "Boyoz",
+      "image_name": "boyoz"
+    },
+    {
+      "index": 438,
+      "title": "Vegan Döner Dürüm (Vegan)",
+      "image_name": "vegan-doner-durum"
+    },
+    {
+      "index": 439,
+      "title": "Glutensiz Tantuni (Glutensiz)",
+      "image_name": "glutensiz-tantuni"
+    },
+    {
+      "index": 440,
+      "title": "Süt Ürünsüz Kaşarlı Tost (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-kasarli-tost"
+    },
+    {
+      "index": 441,
+      "title": "Vegan Boyoz (Vegan)",
+      "image_name": "vegan-boyoz"
+    },
+    {
+      "index": 442,
+      "title": "Vegan Peynirli Pide (Vegan)",
+      "image_name": "vegan-peynirli-pide"
+    },
+    {
+      "index": 443,
+      "title": "Glutensiz Vegan Pişi (Glutensiz & Vegan)",
+      "image_name": "glutensiz-vegan-pisi"
+    },
+    {
+      "index": 444,
+      "title": "Süt Ürünsüz Sahanda Yumurta (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-sahanda-yumurta"
+    },
+    {
+      "index": 445,
+      "title": "Vegan Adana Dürüm (Vegan)",
+      "image_name": "vegan-adana-durum"
+    },
+    {
+      "index": 446,
+      "title": "Glutensiz Çiğ Köfte Dürüm (Glutensiz & Vegan)",
+      "image_name": "glutensiz-cig-kofte-durum"
+    },
+    {
+      "index": 447,
+      "title": "Süt Ürünsüz Pişi (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-pisi"
+    },
+    {
+      "index": 448,
+      "title": "Vejetaryen Kumpir (Vejetaryen)",
+      "image_name": "vejetaryen-kumpir"
+    },
+    {
+      "index": 449,
+      "title": "Glutensiz Balık Ekmek (Glutensiz)",
+      "image_name": "glutensiz-balik-ekmek"
+    },
+    {
+      "index": 450,
+      "title": "Perde Pilavı",
+      "image_name": "perde-pilavi"
+    },
+    {
+      "index": 451,
+      "title": "Analıkızlı Çorbası",
+      "image_name": "analikizli-corbasi"
+    },
+    {
+      "index": 452,
+      "title": "Höşmerim",
+      "image_name": "hosmerim"
+    },
+    {
+      "index": 453,
+      "title": "Sütlü Nuriye",
+      "image_name": "sutlu-nuriye"
+    },
+    {
+      "index": 454,
+      "title": "Maraş Tarhanası Çorbası",
+      "image_name": "maras-tarhanasi-corbasi"
+    },
+    {
+      "index": 455,
+      "title": "Çeçil Peynirli Börek",
+      "image_name": "cecil-peynirli-borek"
+    },
+    {
+      "index": 456,
+      "title": "Kayseri Mantısı",
+      "image_name": "kayseri-mantisi"
+    },
+    {
+      "index": 457,
+      "title": "Bici Bici",
+      "image_name": "bici-bici"
+    },
+    {
+      "index": 458,
+      "title": "Keledoş",
+      "image_name": "keledos"
+    },
+    {
+      "index": 459,
+      "title": "Arabaşı Çorbası",
+      "image_name": "arabasi-corbasi"
+    },
+    {
+      "index": 460,
+      "title": "Çırpma",
+      "image_name": "cirpma"
+    },
+    {
+      "index": 461,
+      "title": "Gülüzar Çorbası",
+      "image_name": "guluzar-corbasi"
+    },
+    {
+      "index": 462,
+      "title": "Tirit",
+      "image_name": "tirit"
+    },
+    {
+      "index": 463,
+      "title": "Gendime Pilavı",
+      "image_name": "gendime-pilavi"
+    },
+    {
+      "index": 464,
+      "title": "Hıngel",
+      "image_name": "hingel"
+    },
+    {
+      "index": 465,
+      "title": "Kaygana",
+      "image_name": "kaygana"
+    },
+    {
+      "index": 466,
+      "title": "Kirde",
+      "image_name": "kirde"
+    },
+    {
+      "index": 467,
+      "title": "Mumbar Dolması",
+      "image_name": "mumbar-dolmasi"
+    },
+    {
+      "index": 468,
+      "title": "Yağlama",
+      "image_name": "yaglama"
+    },
+    {
+      "index": 469,
+      "title": "Lobik",
+      "image_name": "lobik"
+    },
+    {
+      "index": 470,
+      "title": "Düğürcük Çorbası",
+      "image_name": "dugurcuk-corbasi"
+    },
+    {
+      "index": 471,
+      "title": "Çullama",
+      "image_name": "cullama"
+    },
+    {
+      "index": 472,
+      "title": "Ekşili Pilav",
+      "image_name": "eksili-pilav"
+    },
+    {
+      "index": 473,
+      "title": "Katıklı Ekmek",
+      "image_name": "katikli-ekmek"
+    },
+    {
+      "index": 474,
+      "title": "Vegan Perde Pilavı (Vegan)",
+      "image_name": "vegan-perde-pilavi"
+    },
+    {
+      "index": 475,
+      "title": "Glutensiz Analıkızlı Çorbası (Glutensiz & Vegan)",
+      "image_name": "glutensiz-analikizli-corbasi"
+    },
+    {
+      "index": 476,
+      "title": "Süt Ürünsüz Sütlü Nuriye (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-sutlu-nuriye"
+    },
+    {
+      "index": 477,
+      "title": "Vegan Keledoş (Vegan & Glutensiz)",
+      "image_name": "vegan-keledos"
+    },
+    {
+      "index": 478,
+      "title": "Süt Ürünsüz Höşmerim (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-hosmerim"
+    },
+    {
+      "index": 479,
+      "title": "Glutensiz Kayseri Mantısı (Glutensiz)",
+      "image_name": "glutensiz-kayseri-mantisi"
+    },
+    {
+      "index": 480,
+      "title": "Vegan Lobik (Vegan & Glutensiz)",
+      "image_name": "vegan-lobik"
+    },
+    {
+      "index": 481,
+      "title": "Süt Ürünsüz Çırpma (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-cirpma"
+    },
+    {
+      "index": 482,
+      "title": "Vegan Gendime Pilavı (Vegan)",
+      "image_name": "vegan-gendime-pilavi"
+    },
+    {
+      "index": 483,
+      "title": "Süt Ürünsüz Kaygana (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-kaygana"
+    },
+    {
+      "index": 484,
+      "title": "Vegan Ekşili Pilav (Vegan & Glutensiz)",
+      "image_name": "vegan-eksili-pilav"
+    },
+    {
+      "index": 485,
+      "title": "Kuruyemişsiz Sütlü Nuriye (Kuruyemiş Alerjisi)",
+      "image_name": "kuruyemissiz-sutlu-nuriye"
+    },
+    {
+      "index": 486,
+      "title": "Glutensiz Bici Bici (Glutensiz & Vegan)",
+      "image_name": "glutensiz-bici-bici"
+    },
+    {
+      "index": 487,
+      "title": "Vegan Katıklı Ekmek (Vegan & Glutensiz)",
+      "image_name": "vegan-katikli-ekmek"
+    },
+    {
+      "index": 488,
+      "title": "Süt Ürünsüz Tirit (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-tirit"
+    },
+    {
+      "index": 489,
+      "title": "Vegan Arabaşı Çorbası (Vegan)",
+      "image_name": "vegan-arabasi-corbasi"
+    },
+    {
+      "index": 490,
+      "title": "Süt Ürünsüz Gülüzar Çorbası (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-guluzar-corbasi"
+    },
+    {
+      "index": 491,
+      "title": "Vegan Düğürcük Çorbası (Vegan)",
+      "image_name": "vegan-dugurcuk-corbasi"
+    },
+    {
+      "index": 492,
+      "title": "Sırın",
+      "image_name": "sirin"
+    },
+    {
+      "index": 493,
+      "title": "Ayran Aşı Çorbası",
+      "image_name": "ayran-asi-corbasi"
+    },
+    {
+      "index": 494,
+      "title": "Glutensiz Hıngel (Glutensiz)",
+      "image_name": "glutensiz-hingel"
+    },
+    {
+      "index": 495,
+      "title": "Vegan Çullama (Vegan)",
+      "image_name": "vegan-cullama"
+    },
+    {
+      "index": 496,
+      "title": "Süt Ürünsüz Çeçil Peynirli Börek (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-cecil-peynirli-borek"
+    },
+    {
+      "index": 497,
+      "title": "Vegan Mumbar Dolması (Vegan)",
+      "image_name": "vegan-mumbar-dolmasi"
+    },
+    {
+      "index": 498,
+      "title": "Glutensiz Maraş Tarhanası Çorbası (Glutensiz)",
+      "image_name": "glutensiz-maras-tarhanasi"
+    },
+    {
+      "index": 499,
+      "title": "Süt Ürünsüz Yağlama (Süt Ürünü Yok)",
+      "image_name": "sut-urunsuz-yaglama"
+    }
+  ]
+}
