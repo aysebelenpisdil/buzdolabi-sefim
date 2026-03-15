@@ -4,7 +4,7 @@ from typing import Optional
 
 class Settings(BaseSettings):
     PORT: int = 3001
-    FRONTEND_URL: str = "https://ease-publishing-cleared-productions.trycloudflare.com/"
+    FRONTEND_URL: str = "http://localhost:3000"
     GEMINI_API_KEY: Optional[str] = None
     NODE_ENV: str = "development"
     

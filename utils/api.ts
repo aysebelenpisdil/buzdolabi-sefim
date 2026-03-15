@@ -4,11 +4,7 @@ import type {
     SessionInfo, InteractionCreate, ConsumptionCreate, UserFeatures, InteractionResponse,
 } from '../types';
 
-// const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://september-acute-michigan-broken.trycloudflare.com/api';
-
-const API_BASE_URL = 'https://discipline-manchester-hardly-workshops.trycloudflare.com/api';
-
-console.log(API_BASE_URL);
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 export interface ApiError {
     message: string;
