@@ -8,8 +8,9 @@ import logging
 import re
 import time
 from typing import List, Optional, Dict, Any
-import google.generativeai as genai
-from google.api_core.exceptions import ResourceExhausted
+from google import genai
+from google.genai import types
+from google.genai.errors import ClientError
 from app.config import settings
 from app.models.recipe import Recipe
 
@@ -22,7 +23,7 @@ class LLMService:
     Service for generating explanations using Google Gemini API
     Provides personalized recipe recommendation explanations
     """
-    
+
     def __init__(self):
         self.api_key = settings.GEMINI_API_KEY
         self.model_name = settings.GEMINI_MODEL
@@ -30,68 +31,68 @@ class LLMService:
         self.max_tokens = settings.GEMINI_MAX_TOKENS
         self.temperature = settings.GEMINI_TEMPERATURE
         self.enabled = settings.GEMINI_ENABLED
-        self.model: Optional[genai.GenerativeModel] = None
+        self.client: Optional[genai.Client] = None
         self._model_loaded = False
-    
+
     def _load_model(self):
-        """Initialize Gemini API client and load model"""
+        """Initialize Gemini API client"""
         if not self.enabled:
             logger.debug("LLM service is disabled")
             return
-        
+
         if not self.api_key:
             logger.warning("GEMINI_API_KEY not found in environment variables")
             logger.warning("LLM explanations will be disabled")
             self.enabled = False
             return
-        
+
         if not self._model_loaded:
             try:
                 logger.info(f"Initializing Gemini API: {self.model_name}")
-                genai.configure(api_key=self.api_key)
-                self.model = genai.GenerativeModel(self.model_name)
+                self.client = genai.Client(api_key=self.api_key)
                 self._model_loaded = True
-                logger.info(f"Gemini model loaded successfully: {self.model_name}")
+                logger.info(f"Gemini client initialized for model: {self.model_name}")
             except Exception as e:
                 logger.error(f"Error initializing Gemini API: {e}", exc_info=True)
                 logger.warning("LLM explanations will be disabled")
                 self.enabled = False
                 self._model_loaded = False
                 raise
-    
+
     def is_available(self) -> bool:
-        """
-        Check if LLM service is available and ready
-        
-        Returns:
-            True if model is loaded and API key is available, False otherwise
-        """
-        return self.enabled and self._model_loaded and self.model is not None
+        """Check if LLM service is available and ready"""
+        return self.enabled and self._model_loaded and self.client is not None
 
-    def _try_generate_with_retry(self, prompt: str, generation_config, max_retries: int = 1):
+    def _try_generate_with_retry(self, prompt: str, config: types.GenerateContentConfig, max_retries: int = 1):
         """429 quota hatasında retry ve model fallback dene."""
-        models_to_try = [self.model]
+        models_to_try = [self.model_name]
         if self.fallback_model and self.model_name != self.fallback_model:
-            fallback = genai.GenerativeModel(self.fallback_model)
-            models_to_try.append(fallback)
+            models_to_try.append(self.fallback_model)
 
-        for model in models_to_try:
+        for model_name in models_to_try:
             for attempt in range(max_retries + 1):
                 try:
-                    return model.generate_content(prompt, generation_config=generation_config)
-                except ResourceExhausted as e:
-                    msg = str(e)
-                    if attempt < max_retries:
-                        match = re.search(r'retry in (\d+(?:\.\d+)?)s', msg, re.I)
-                        delay = min(float(match.group(1)) if match else 20, 60)
-                        logger.warning(f"Gemini quota (429), {delay:.0f}s sonra tekrar deniyor...")
-                        time.sleep(delay)
-                    elif model is models_to_try[-1]:
-                        logger.warning("Gemini API kota aşıldı (429)")
-                        raise
+                    return self.client.models.generate_content(
+                        model=model_name,
+                        contents=prompt,
+                        config=config,
+                    )
+                except ClientError as e:
+                    if e.code == 429:
+                        msg = str(e)
+                        if attempt < max_retries:
+                            match = re.search(r'retry in (\d+(?:\.\d+)?)s', msg, re.I)
+                            delay = min(float(match.group(1)) if match else 20, 60)
+                            logger.warning(f"Gemini quota (429), {delay:.0f}s sonra tekrar deniyor...")
+                            time.sleep(delay)
+                        elif model_name != models_to_try[-1]:
+                            logger.info(f"Ana model kota aşıldı, fallback ({self.fallback_model}) deneniyor...")
+                            break
+                        else:
+                            logger.warning("Gemini API kota aşıldı (429)")
+                            raise
                     else:
-                        logger.info(f"Ana model kota aşıldı, fallback ({self.fallback_model}) deneniyor...")
-                        break
+                        raise
                 except Exception:
                     raise
 
@@ -102,19 +103,7 @@ class LLMService:
         user_preferences: Optional[Dict[str, Any]] = None,
         excluded_ingredients: Optional[List[str]] = None
     ) -> str:
-        """
-        Build prompt for Gemini API
-        
-        Args:
-            user_ingredients: List of user's fridge ingredients
-            recommended_recipes: List of recommended Recipe objects
-            user_preferences: Dietary preferences dict (vegan, gluten_free, etc.)
-            excluded_ingredients: List of excluded ingredients
-            
-        Returns:
-            Formatted prompt string
-        """
-        # System prompt
+        """Build prompt for Gemini API"""
         system_prompt = """You are a professional chef and kitchen consultant. You recommend recipes based on the user's available ingredients and explain why these recipes were selected.
 
 Tasks:
@@ -129,11 +118,10 @@ Response format:
 - General summary (why these recipes were recommended)
 - Missing ingredients and alternatives (if any)
 """
-        
-        # User context
+
         context_parts = []
         context_parts.append(f"**Mevcut Malzemeler:** {', '.join(user_ingredients)}")
-        
+
         if user_preferences:
             active_prefs = []
             if user_preferences.get('vegan'):
@@ -146,26 +134,24 @@ Response format:
                 active_prefs.append('Süt Ürünü İçermez')
             if user_preferences.get('nutAllergy'):
                 active_prefs.append('Kuruyemiş İçermez')
-            
+
             if active_prefs:
                 context_parts.append(f"**Diyet Tercihleri:** {', '.join(active_prefs)}")
-        
+
         if excluded_ingredients:
             context_parts.append(f"**Hariç Tutulan Malzemeler:** {', '.join(excluded_ingredients)}")
-        
-        # Recommended recipes
+
         recipes_text = "\n\n**Önerilen Tarifler:**\n"
-        for i, recipe in enumerate(recommended_recipes[:10], 1):  # Max 10 recipes
+        for i, recipe in enumerate(recommended_recipes[:10], 1):
             ingredients_text = recipe.Cleaned_Ingredients or recipe.Ingredients
             ingredients_clean = ingredients_text.replace('[', '').replace(']', '').replace("'", '')
-            
+
             recipes_text += f"\n{i}. **{recipe.Title}**\n"
             recipes_text += f"   Ingredients: {ingredients_clean[:200]}...\n"
             if recipe.Instructions:
                 instructions_short = recipe.Instructions[:150] + "..." if len(recipe.Instructions) > 150 else recipe.Instructions
                 recipes_text += f"   Instructions: {instructions_short}\n"
-        
-        # Combine all parts
+
         prompt = f"""{system_prompt}
 
 ---
@@ -177,9 +163,9 @@ Response format:
 ---
 
 Explain why these recipes were recommended. Use a concise, clear, and friendly tone."""
-        
+
         return prompt
-    
+
     def generate_explanation(
         self,
         user_ingredients: List[str],
@@ -187,63 +173,52 @@ Explain why these recipes were recommended. Use a concise, clear, and friendly t
         user_preferences: Optional[Dict[str, Any]] = None,
         excluded_ingredients: Optional[List[str]] = None
     ) -> Optional[str]:
-        """
-        Generate explanation for recipe recommendations using Gemini API
-        
-        Args:
-            user_ingredients: List of user's fridge ingredients
-            recommended_recipes: List of recommended Recipe objects
-            user_preferences: Dietary preferences dict
-            excluded_ingredients: List of excluded ingredients
-            
-        Returns:
-            Explanation text or None if generation fails
-        """
+        """Generate explanation for recipe recommendations using Gemini API"""
         if not recommended_recipes:
             logger.warning("No recipes provided for explanation generation")
             return None
-        
+
         if not self.enabled:
             logger.debug("LLM service is disabled, skipping explanation generation")
             return None
-        
+
         if not self.api_key:
             logger.debug("GEMINI_API_KEY not found, skipping explanation generation")
             return None
-        
+
         try:
-            # Load model if not loaded (lazy loading)
             if not self._model_loaded:
                 self._load_model()
-            
-            # Check if model loaded successfully
+
             if not self.is_available():
                 logger.warning("LLM model could not be loaded, skipping explanation generation")
                 return None
-            
-            # Build prompt
+
             prompt = self._build_prompt(
                 user_ingredients=user_ingredients,
                 recommended_recipes=recommended_recipes,
                 user_preferences=user_preferences,
                 excluded_ingredients=excluded_ingredients
             )
-            
+
             logger.debug(f"Generating explanation for {len(recommended_recipes)} recipes")
 
-            config = genai.types.GenerationConfig(
+            config = types.GenerateContentConfig(
                 temperature=self.temperature,
                 max_output_tokens=self.max_tokens,
             )
             response = self._try_generate_with_retry(prompt, config)
             explanation = response.text.strip()
-            
+
             logger.debug(f"Explanation generated: {len(explanation)} characters")
-            
+
             return explanation
-            
-        except ResourceExhausted:
-            logger.warning("Gemini API kota aşıldı, açıklama atlanıyor")
+
+        except ClientError as e:
+            if e.code == 429:
+                logger.warning("Gemini API kota aşıldı, açıklama atlanıyor")
+            else:
+                logger.error(f"Gemini API client error: {e}", exc_info=True)
             return None
         except Exception as e:
             logger.error(f"Error generating explanation: {e}", exc_info=True)
@@ -276,7 +251,6 @@ Explain why these recipes were recommended. Use a concise, clear, and friendly t
             if not self.is_available():
                 return None
 
-            # Eksik malzemeleri JSON key'lerinde kullan (Türkçe karakter sorunlarını azalt)
             subs_example = {ing: ["ikame1", "ikame2"] for ing in missing_ingredients[:2]}
             import json as _json
             example_str = _json.dumps({"substitutions": subs_example, "explanation": "Örnek açıklama"}, ensure_ascii=False)
@@ -292,9 +266,11 @@ Her eksik malzeme için 1-3 ikame öner (Türk mutfağına uygun). Örnek format
 
 Yanıtın SADECE bu JSON formatında olsun, tırnak ve virgüllere dikkat et."""
 
-            config = genai.types.GenerationConfig(
+            # thinking_budget=0: JSON üretimi için thinking devre dışı — daha hızlı ve ucuz
+            config = types.GenerateContentConfig(
                 temperature=0.3,
-                max_output_tokens=1500,
+                max_output_tokens=2048,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
             )
             response = self._try_generate_with_retry(prompt, config)
 
@@ -313,7 +289,6 @@ Yanıtın SADECE bu JSON formatında olsun, tırnak ve virgüllere dikkat et."""
                 text = re.sub(r'\bNone\b', 'null', text)
                 text = re.sub(r'\bTrue\b', 'true', text)
                 text = re.sub(r'\bFalse\b', 'false', text)
-                # Sondaki virgülleri temizle
                 text = re.sub(r',\s*}', '}', text)
                 text = re.sub(r',\s*]', ']', text)
                 return text
@@ -322,7 +297,6 @@ Yanıtın SADECE bu JSON formatında olsun, tırnak ve virgüllere dikkat et."""
             try:
                 result = json.loads(_normalize_llm_json(raw))
             except json.JSONDecodeError as parse_err:
-                # LLM bazen bozuk JSON döndürür; JSON bloğunu çıkarmayı dene
                 match = re.search(r'\{[\s\S]*\}', raw)
                 if match:
                     try:
@@ -340,8 +314,11 @@ Yanıtın SADECE bu JSON formatında olsun, tırnak ve virgüllere dikkat et."""
             logger.debug(f"Substitutions generated for {len(missing_ingredients)} ingredients")
             return result
 
-        except ResourceExhausted:
-            logger.warning("Gemini API kota aşıldı, ikame önerileri boş döndürülüyor")
+        except ClientError as e:
+            if e.code == 429:
+                logger.warning("Gemini API kota aşıldı, ikame önerileri boş döndürülüyor")
+            else:
+                logger.error(f"Gemini API client error: {e}", exc_info=True)
             return {"substitutions": {}, "explanation": None}
         except Exception as e:
             logger.error(f"Error generating substitutions: {e}", exc_info=True)
@@ -361,4 +338,3 @@ Yanıtın SADECE bu JSON formatında olsun, tırnak ve virgüllere dikkat et."""
 
 # Singleton instance
 llm_service = LLMService()
-

@@ -10,22 +10,22 @@ export interface IngredientMetadata {
 }
 
 export const INGREDIENT_CATEGORIES = {
-  FRUITS: "Fruits",
-  VEGETABLES: "Vegetables",
-  MEAT_POULTRY: "Meat & Poultry",
-  SEAFOOD: "Seafood",
-  DAIRY_EGGS: "Dairy & Eggs",
-  GRAINS: "Grains & Pasta",
-  SPICES: "Spices & Herbs",
-  BAKERY: "Bakery",
-  NUTS: "Nuts & Seeds",
-  LEGUMES: "Legumes",
-  BEVERAGES: "Beverages",
-  SAUCES: "Sauces & Condiments",
-  OILS: "Oils",
-  SWEETS: "Sweets",
-  PRESERVED: "Preserved & Pickled",
-  OTHER: "Other",
+  FRUITS: "Meyveler",
+  VEGETABLES: "Sebzeler",
+  MEAT_POULTRY: "Et & Kümes Hayvanları",
+  SEAFOOD: "Deniz Ürünleri",
+  DAIRY_EGGS: "Süt Ürünleri & Yumurta",
+  GRAINS: "Tahıllar & Makarna",
+  SPICES: "Baharatlar & Otlar",
+  BAKERY: "Fırın Ürünleri",
+  NUTS: "Kuruyemiş & Tohumlar",
+  LEGUMES: "Baklagiller",
+  BEVERAGES: "İçecekler",
+  SAUCES: "Soslar & Çeşniler",
+  OILS: "Yağlar",
+  SWEETS: "Tatlılar",
+  PRESERVED: "Konserveler & Turşular",
+  OTHER: "Diğer",
 } as const;
 
 export const CATEGORY_EMOJIS: Record<string, string> = {

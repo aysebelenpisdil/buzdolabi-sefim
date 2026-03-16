@@ -233,28 +233,4 @@ export function useTrackIngredient() {
   }, []);
 }
 
-/**
- * Get all available ingredients (sorted by frequency)
- * @param limit - Maximum number of ingredients to return
- * @returns Top ingredients by frequency
- */
-export function useTopIngredients(limit: number = 50): CleanedIngredient[] {
-  return useMemo(() => {
-    return (cleanedIngredients as CleanedIngredient[]).slice(0, limit);
-  }, [limit]);
-}
-
-/**
- * Check if an ingredient exists in the cleaned dataset
- * @param name - Ingredient name to check
- * @returns True if ingredient exists
- */
-export function useIngredientExists(name: string): boolean {
-  return useMemo(() => {
-    const normalized = name.toLowerCase().trim();
-    return (cleanedIngredients as CleanedIngredient[]).some(
-      ingredient => ingredient.name.toLowerCase() === normalized
-    );
-  }, [name]);
-}
 

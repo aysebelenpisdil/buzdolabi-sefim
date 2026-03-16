@@ -2,13 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import recipes from '../data/recipes';
 import { parseIngredientList } from '../utils/helpers';
-import { SubstitutionResponse } from '../types';
+import { SubstitutionResponse, Recipe } from '../types';
 import type { MealType } from '../types';
 import RecipeImage from '../components/RecipeImage';
 import { estimateRecipeCalories, getCalorieLabel, getIngredientCalories } from '../utils/calorieEstimator';
 import { useFridge } from '../store/FridgeContext';
 import { useAuth } from '../store/AuthContext';
-import { getSubstitutions, recordInteraction, logConsumption, getRecipeStatus, type ApiError } from '../utils/api';
+import { getSubstitutions, recordInteraction, logConsumption, getRecipeStatus, getRecipeByTitle, type ApiError } from '../utils/api';
 
 const MEAL_OPTIONS: { value: MealType; label: string }[] = [
     { value: 'breakfast', label: 'Kahvaltı' },
@@ -22,9 +22,16 @@ const PORTION_OPTIONS = [0.5, 1, 1.5, 2];
 const RecipeDetailPage: React.FC = () => {
     const { title } = useParams<{ title: string }>();
     const location = useLocation();
-    const { matchingIngredients } = (location.state as { matchingIngredients: string[] }) || { matchingIngredients: [] };
+    const locationState = location.state as { matchingIngredients?: string[]; recipe?: Recipe } | null;
+    const matchingIngredients = locationState?.matchingIngredients ?? [];
     const { fridgeIngredients } = useFridge();
     const { user, logout } = useAuth();
+
+    const [recipe, setRecipe] = useState<Recipe | undefined>(
+        locationState?.recipe ?? recipes.find(r => r.Title === decodeURIComponent(title || ''))
+    );
+    const [recipeLoading, setRecipeLoading] = useState(!recipe);
+    const [recipeError, setRecipeError] = useState(false);
 
     const [substitutions, setSubstitutions] = useState<Record<string, string[]> | null>(null);
     const [subExplanation, setSubExplanation] = useState<string | null>(null);
@@ -36,8 +43,22 @@ const RecipeDetailPage: React.FC = () => {
     const [selectedPortion, setSelectedPortion] = useState(1);
     const [cookLogged, setCookLogged] = useState(false);
 
-    const recipe = recipes.find(r => r.Title === decodeURIComponent(title || ''));
-    const recipeTitle = recipe?.Title ?? '';
+    const recipeTitle = recipe?.Title ?? decodeURIComponent(title || '');
+
+    useEffect(() => {
+        if (recipe) return;
+        const decodedTitle = decodeURIComponent(title || '');
+        setRecipeLoading(true);
+        setRecipeError(false);
+        getRecipeByTitle(decodedTitle)
+            .then((data: Recipe) => setRecipe(data))
+            .catch(() => {
+                const local = recipes.find(r => r.Title === decodedTitle);
+                if (local) setRecipe(local);
+                else setRecipeError(true);
+            })
+            .finally(() => setRecipeLoading(false));
+    }, [title]);
 
     useEffect(() => {
         if (user && recipeTitle) {
@@ -68,7 +89,16 @@ const RecipeDetailPage: React.FC = () => {
         }
     }, [user, recipeTitle, selectedMeal, selectedPortion, logout]);
 
-    if (!recipe) {
+    if (recipeLoading) {
+        return (
+            <div className="min-h-[50vh] flex flex-col items-center justify-center">
+                <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary mb-4"></div>
+                <p className="text-gray-600">Tarif yükleniyor...</p>
+            </div>
+        );
+    }
+
+    if (recipeError || !recipe) {
         return (
             <div className="min-h-[50vh] flex flex-col items-center justify-center">
                 <h2 className="text-2xl font-bold text-gray-800">Tarif bulunamadı</h2>
