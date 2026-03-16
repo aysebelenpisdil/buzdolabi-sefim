@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { RecipeWithMatch } from '../types';
 import { filterRecipes, getActiveFilterLabels, CalorieRange } from '../utils/recipeFilter';
 import { estimateRecipeCalories, getCalorieLabel } from '../utils/calorieEstimator';
+import { parseIngredientList, computeRecipeAvailability, type RecipeAvailability } from '../utils/helpers';
 
 type CalorieFilterKey = 'all' | 'low' | 'medium' | 'high';
 
@@ -24,6 +25,8 @@ const CALORIE_FILTER_LABELS: Record<CalorieFilterKey, string> = {
     high: 'Yüksek (>700)',
 };
 
+const RECIPES_PER_PAGE = 12;
+
 function enrichWithCalories(recipes: RecipeWithMatch[]): RecipeWithMatch[] {
     return recipes.map(r => ({
         ...r,
@@ -35,7 +38,6 @@ const RecipesPage: React.FC = () => {
     const { fridgeIngredients, dietaryPreferences, excludedIngredients } = useFridge();
     const { user } = useAuth();
     const [suitableRecipes, setSuitableRecipes] = useState<RecipeWithMatch[]>([]);
-    const [displayedRecipes, setDisplayedRecipes] = useState<RecipeWithMatch[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [page, setPage] = useState(1);
@@ -44,13 +46,10 @@ const RecipesPage: React.FC = () => {
     const [ragExplanation, setRagExplanation] = useState<string | null>(null);
     const [ragMetadata, setRagMetadata] = useState<any>(null);
     const [calorieFilter, setCalorieFilter] = useState<CalorieFilterKey>('all');
-    
-    const RECIPES_PER_PAGE = 12;
 
     const fetchRecipes = async () => {
         if (fridgeIngredients.length === 0) {
             setSuitableRecipes([]);
-            setDisplayedRecipes([]);
             setPage(1);
             setRagExplanation(null);
             setRagMetadata(null);
@@ -84,7 +83,6 @@ const RecipesPage: React.FC = () => {
                 setRagExplanation(ragResponse.explanation || null);
                 setRagMetadata(ragResponse.metadata || null);
                 setSuitableRecipes(filteredRecipes);
-                setDisplayedRecipes(filteredRecipes.slice(0, RECIPES_PER_PAGE));
             } else {
                 const response = await getRecommendations(fridgeIngredients);
                 const endTime = performance.now();
@@ -92,9 +90,8 @@ const RecipesPage: React.FC = () => {
                 setResponseTime(Math.round(endTime - startTime));
                 const allRecipes = enrichWithCalories(response.recommendations || []);
                 const filteredRecipes = filterRecipes(allRecipes, dietaryPreferences, excludedIngredients, CALORIE_RANGES[calorieFilter]);
-                
+
                 setSuitableRecipes(filteredRecipes);
-                setDisplayedRecipes(filteredRecipes.slice(0, RECIPES_PER_PAGE));
             }
             
             setPage(1);
@@ -102,7 +99,6 @@ const RecipesPage: React.FC = () => {
             const apiError = err as ApiError;
             setError(apiError.message);
             setSuitableRecipes([]);
-            setDisplayedRecipes([]);
             setRagExplanation(null);
             setRagMetadata(null);
         } finally {
@@ -111,10 +107,7 @@ const RecipesPage: React.FC = () => {
     };
 
     const loadMore = () => {
-        const nextPage = page + 1;
-        const endIdx = nextPage * RECIPES_PER_PAGE;
-        setDisplayedRecipes(suitableRecipes.slice(0, endIdx));
-        setPage(nextPage);
+        setPage(prev => prev + 1);
     };
 
     const activeFilters = useMemo(() => {
@@ -139,13 +132,37 @@ const RecipesPage: React.FC = () => {
         }
     }, [user, fridgeIngredients]);
 
-    const getMissingIngredients = (recipe: RecipeWithMatch): string[] => {
-        const allCleaned = recipe.Cleaned_Ingredients
-            ? recipe.Cleaned_Ingredients.replace(/[\[\]']/g, '').split(',').map(s => s.trim()).filter(Boolean)
-            : [];
-        const fridgeSet = new Set(fridgeIngredients.map(i => i.toLowerCase()));
-        return allCleaned.filter(ing => !fridgeSet.has(ing.toLowerCase()));
-    };
+    // Pre-compute availability for all recipes once (O(N)), then use for sort + render
+    const availabilityMap = useMemo(() => {
+        const map = new Map<string, RecipeAvailability>();
+        for (const recipe of suitableRecipes) {
+            const cleaned = recipe.Cleaned_Ingredients
+                ? parseIngredientList(recipe.Cleaned_Ingredients)
+                : [];
+            map.set(recipe.Title, computeRecipeAvailability(cleaned, fridgeIngredients, recipe.matchingIngredients));
+        }
+        return map;
+    }, [suitableRecipes, fridgeIngredients]);
+
+    // Fully-available recipes first, then by covered ratio
+    const sortedRecipes = useMemo(() => {
+        if (suitableRecipes.length === 0) return [];
+        return [...suitableRecipes].sort((a, b) => {
+            const avA = availabilityMap.get(a.Title)!;
+            const avB = availabilityMap.get(b.Title)!;
+            if (avA.isFullyAvailable !== avB.isFullyAvailable) {
+                return avA.isFullyAvailable ? -1 : 1;
+            }
+            const ratioA = avA.totalCount > 0 ? avA.coveredCount / avA.totalCount : 0;
+            const ratioB = avB.totalCount > 0 ? avB.coveredCount / avB.totalCount : 0;
+            return ratioB - ratioA;
+        });
+    }, [suitableRecipes, availabilityMap]);
+
+    const displayedRecipes = useMemo(
+        () => sortedRecipes.slice(0, page * RECIPES_PER_PAGE),
+        [sortedRecipes, page]
+    );
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -241,8 +258,12 @@ const RecipesPage: React.FC = () => {
                             </div>
                             <div className="ml-3 flex-1">
                                 <h3 className="text-sm font-semibold text-gray-900 mb-2">Yapay Zeka Açıklaması</h3>
-                                <p className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">
-                                    {ragExplanation}
+                                <p className="text-sm text-gray-700 leading-relaxed">
+                                    {ragExplanation
+                                        .replace(/#{1,6}\s*/g, '')
+                                        .replace(/\*{1,2}([^*]+)\*{1,2}/g, '$1')
+                                        .replace(/^\s*[-*]\s+/gm, '- ')
+                                        .trim()}
                                 </p>
                             </div>
                         </div>
@@ -303,16 +324,15 @@ const RecipesPage: React.FC = () => {
                 <>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {displayedRecipes.map((recipe, index) => {
-                        const missing = getMissingIngredients(recipe);
-                        const hasMissing = missing.length > 0;
+                        const availability = availabilityMap.get(recipe.Title)!;
 
                         return (
                             <Link
                                 to={`/recipe/${encodeURIComponent(recipe.Title)}`}
-                                state={{ matchingIngredients: recipe.matchingIngredients, recipe }}
+                                state={{ matchingIngredients: availability.allMatching, recipe }}
                                 key={index}
                                 onClick={() => trackView(recipe.Title)}
-                                className="group flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+                                className={`group flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border ${availability.isFullyAvailable ? 'border-green-300 ring-2 ring-green-100' : 'border-gray-100'}`}
                             >
                                 <div className="relative h-48 w-full overflow-hidden">
                                     <RecipeImage
@@ -323,7 +343,7 @@ const RecipesPage: React.FC = () => {
                                     />
                                     <div className="absolute top-3 right-3 flex flex-col gap-1.5 items-end">
                                         <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                                            {recipe.matchingCount} Eşleşme
+                                            {availability.coveredCount}/{availability.totalCount} Eşleşme
                                         </span>
                                         {recipe.estimatedCalories != null && (
                                             <span className={`text-xs font-bold px-3 py-1 rounded-full shadow-lg ${
@@ -337,6 +357,16 @@ const RecipesPage: React.FC = () => {
                                             </span>
                                         )}
                                     </div>
+                                    {availability.isFullyAvailable && (
+                                        <div className="absolute top-3 left-3">
+                                            <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                MUTFAKTA HAZIR
+                                            </span>
+                                        </div>
+                                    )}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
                                 <div className="flex-1 p-6 flex flex-col">
@@ -345,16 +375,16 @@ const RecipesPage: React.FC = () => {
                                     </h3>
                                     <div className="mb-2">
                                         <p className="text-sm text-gray-600">
-                                            <span className="font-semibold">Eşleşen:</span> {recipe.matchingIngredients.join(', ')}
+                                            <span className="font-semibold">Eşleşen:</span> {availability.allMatching.join(', ')}
                                         </p>
                                     </div>
-                                    {hasMissing && (
+                                    {availability.missing.length > 0 && (
                                         <div className="mb-2">
                                             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                                                 </svg>
-                                                {missing.length} eksik - ikame önerilebilir
+                                                {availability.missing.length} eksik - ikame önerilebilir
                                             </span>
                                         </div>
                                     )}
@@ -372,8 +402,8 @@ const RecipesPage: React.FC = () => {
                                                     </svg>
                                                 </button>
                                             )}
-                                            <span className="text-xs text-gray-400 uppercase tracking-wider">
-                                                Mutfakta Hazır
+                                            <span className={`text-xs uppercase tracking-wider font-semibold ${availability.isFullyAvailable ? 'text-green-600' : 'text-gray-400'}`}>
+                                                {availability.isFullyAvailable ? 'Mutfakta Hazır' : `${availability.missing.length} Eksik`}
                                             </span>
                                         </div>
                                     </div>
@@ -383,7 +413,7 @@ const RecipesPage: React.FC = () => {
                     })}
                 </div>
                 
-                {displayedRecipes.length < suitableRecipes.length && (
+                {displayedRecipes.length < sortedRecipes.length && (
                     <div className="mt-12 text-center">
                         <button
                             onClick={loadMore}
@@ -395,7 +425,7 @@ const RecipesPage: React.FC = () => {
                             </svg>
                         </button>
                         <p className="mt-2 text-sm text-gray-500">
-                            {suitableRecipes.length - displayedRecipes.length} tarif daha mevcut
+                            {sortedRecipes.length - displayedRecipes.length} tarif daha mevcut
                         </p>
                     </div>
                 )}

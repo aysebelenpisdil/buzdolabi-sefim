@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import recipes from '../data/recipes';
-import { parseIngredientList } from '../utils/helpers';
+import { parseIngredientList, computeRecipeAvailability } from '../utils/helpers';
 import { SubstitutionResponse, Recipe } from '../types';
 import type { MealType } from '../types';
 import RecipeImage from '../components/RecipeImage';
@@ -114,8 +114,9 @@ const RecipeDetailPage: React.FC = () => {
     const totalCalories = estimateRecipeCalories(recipe.Cleaned_Ingredients);
     const calorieLabel = totalCalories != null ? getCalorieLabel(totalCalories) : null;
 
-    const fridgeSet = new Set(fridgeIngredients.map(i => i.toLowerCase()));
-    const missingIngredients = cleanedList.filter(ing => !fridgeSet.has(ing.toLowerCase()));
+    const availability = computeRecipeAvailability(cleanedList, fridgeIngredients, matchingIngredients);
+    const missingIngredients = availability.missing;
+    const allMatchingIngredients = availability.allMatching;
 
     const handleSubstitution = async () => {
         if (missingIngredients.length === 0) return;
@@ -184,11 +185,11 @@ const RecipeDetailPage: React.FC = () => {
                                 Malzemeler
                             </h2>
 
-                            {matchingIngredients.length > 0 && (
+                            {allMatchingIngredients.length > 0 && (
                                 <div className="mb-6 pb-4 border-b border-green-200">
                                     <h3 className="text-lg font-semibold text-gray-800 mb-2">Eşleşen Malzemeleriniz:</h3>
                                     <ul className="flex flex-wrap gap-2">
-                                        {matchingIngredients.map((ing, idx) => (
+                                        {allMatchingIngredients.map((ing, idx) => (
                                             <li key={idx} className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">
                                                 {ing}
                                             </li>

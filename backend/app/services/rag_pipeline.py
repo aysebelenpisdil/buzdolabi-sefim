@@ -211,7 +211,7 @@ class RAGPipeline:
             Dictionary with recipes, explanation, and metadata
         """
         logger.info(f"RAG pipeline started: {len(user_ingredients)} ingredients, top_k={top_k}")
-        
+
         # Step 1: Retrieval (FAISS)
         retrieved_recipes = self._retrieve(
             user_ingredients=user_ingredients,
@@ -267,7 +267,7 @@ class RAGPipeline:
             )
         
         logger.info(f"RAG pipeline completed: {len(final_recipes)} recipes, explanation={'yes' if explanation else 'no'}")
-        
+
         return {
             "recipes": final_recipes,
             "explanation": explanation,

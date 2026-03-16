@@ -104,19 +104,15 @@ class LLMService:
         excluded_ingredients: Optional[List[str]] = None
     ) -> str:
         """Build prompt for Gemini API"""
-        system_prompt = """You are a professional chef and kitchen consultant. You recommend recipes based on the user's available ingredients and explain why these recipes were selected.
+        system_prompt = """Sen bir mutfak danışmanısın. Kullanıcının elindeki malzemelere göre önerilen tarifleri kısaca özetle.
 
-Tasks:
-1. Explain why the recommended recipes were chosen
-2. Indicate which ingredients match
-3. Note any missing ingredients and suggest alternatives
-4. Respect user preferences (vegan, gluten-free, etc.)
-5. Use a concise, clear, and friendly tone
-
-Response format:
-- Short description (1-2 sentences) for each recipe
-- General summary (why these recipes were recommended)
-- Missing ingredients and alternatives (if any)
+Kurallar:
+- Türkçe yaz.
+- Düz metin yaz, markdown işaretleri (###, **, * vb.) KULLANMA.
+- En fazla 3-4 cümle yaz. Kısa ve öz ol.
+- Tariflerin genel temasını özetle (örn. "sebze ağırlıklı", "pratik tarifler" vb.).
+- Hangi ana malzemelerin eşleştiğini kısaca belirt.
+- Her tarifi tek tek açıklama, genel bir özet ver.
 """
 
         context_parts = []
@@ -141,28 +137,22 @@ Response format:
         if excluded_ingredients:
             context_parts.append(f"**Hariç Tutulan Malzemeler:** {', '.join(excluded_ingredients)}")
 
-        recipes_text = "\n\n**Önerilen Tarifler:**\n"
-        for i, recipe in enumerate(recommended_recipes[:10], 1):
+        recipes_text = "\n\nÖnerilen Tarifler:\n"
+        for i, recipe in enumerate(recommended_recipes[:5], 1):
             ingredients_text = recipe.Cleaned_Ingredients or recipe.Ingredients
             ingredients_clean = ingredients_text.replace('[', '').replace(']', '').replace("'", '')
-
-            recipes_text += f"\n{i}. **{recipe.Title}**\n"
-            recipes_text += f"   Ingredients: {ingredients_clean[:200]}...\n"
-            if recipe.Instructions:
-                instructions_short = recipe.Instructions[:150] + "..." if len(recipe.Instructions) > 150 else recipe.Instructions
-                recipes_text += f"   Instructions: {instructions_short}\n"
+            recipes_text += f"\n{i}. {recipe.Title} - Malzemeler: {ingredients_clean[:200]}\n"
 
         prompt = f"""{system_prompt}
-
 ---
 
-**User Info:**
+Kullanıcı Bilgisi:
 {chr(10).join(context_parts)}
 {recipes_text}
 
 ---
 
-Explain why these recipes were recommended. Use a concise, clear, and friendly tone."""
+Bu tariflerin neden önerildiğini kısaca özetle. Düz metin yaz, markdown kullanma."""
 
         return prompt
 

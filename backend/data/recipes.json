@@ -3498,5 +3498,229 @@
     "Instructions": "Yulaf sütü ve yumurtayı karıştırın.\nYufkaları karışıma batırın.\nTepsiye sererek aralarına vegan kaşar serpin.\nMargarini eritip üzerine gezdirin.\n180 derece fırında 25 dakika pişirin.",
     "Image_Name": "sut-urunsuz-yaglama",
     "Cleaned_Ingredients": "['yufka', 'vegan kaşar', 'margarin', 'yulaf sütü', 'yumurta', 'tuz']"
+  },
+  {
+    "Title": "Patates Köftesi",
+    "Ingredients": "['4 adet patates', '1 adet yumurta', '2 yemek kaşığı un', '1 adet soğan', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '2 yemek kaşığı sıvı yağ', 'Kızartmak için sıvı yağ']",
+    "Instructions": "Patatesleri haşlayıp kabuklarını soyun ve ezerek püre haline getirin.\nSoğanı rendeleyip suyunu sıkın.\nPatates püresine yumurta, un, soğan, tuz, karabiber ve pul biberi ekleyip yoğurun.\nCeviz büyüklüğünde köfteler şekillendirin.\nKızgın yağda her iki tarafını kızartın.\nKağıt havlu üzerinde fazla yağı alın ve sıcak servis yapın.",
+    "Image_Name": "patates-koftesi",
+    "Cleaned_Ingredients": "['patates', 'yumurta', 'un', 'soğan', 'tuz', 'karabiber', 'pul biber', 'sıvı yağ', 'sıvı yağ']"
+  },
+  {
+    "Title": "Sodalı Köfte",
+    "Ingredients": "['500 gram kıyma', '1 adet soğan', '2 dilim bayat ekmek', '1 çay kaşığı karbonat', '1 yumurta', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '2 yemek kaşığı sıvı yağ', 'Kızartmak için sıvı yağ']",
+    "Instructions": "Soğanı rendeleyip suyunu sıkın.\nBayat ekmeği ıslatıp suyunu sıkın.\nKıymaya soğan, ekmek, karbonat, yumurta ve baharatları ekleyip iyice yoğurun.\nBuzdolabında 30 dakika dinlendirin.\nKöfteleri şekillendirip kızgın yağda kızartın.\nSıcak servis yapın.",
+    "Image_Name": "sodali-kofte",
+    "Cleaned_Ingredients": "['kıyma', 'soğan', 'bayat ekmek', 'karbonat', 'yumurta', 'tuz', 'karabiber', 'pul biber', 'sıvı yağ', 'sıvı yağ']"
+  },
+  {
+    "Title": "Mantarlı Tavuk",
+    "Ingredients": "['500 gram tavuk göğsü', '300 gram kültür mantarı', '2 adet soğan', '2 adet domates', '2 adet sivri biber', '3 yemek kaşığı sıvı yağ', '1 yemek kaşığı domates salçası', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber']",
+    "Instructions": "Tavukları kuşbaşı doğrayın.\nMantarları dilimleyin, soğan ve biberleri doğrayın.\nTavada yağı kızdırıp tavukları kavurun.\nSoğan ve biberleri ekleyip soteleyin.\nMantarları ve salçayı ilave edin.\nDomatesleri ekleyip kısık ateşte 15 dakika pişirin.\nBaharatlarla tatlandırıp servis yapın.",
+    "Image_Name": "mantarli-tavuk",
+    "Cleaned_Ingredients": "['tavuk göğsü', 'kültür mantarı', 'soğan', 'domates', 'sivri biber', 'sıvı yağ', 'domates salçası', 'tuz', 'karabiber', 'pul biber']"
+  },
+  {
+    "Title": "Mantar Sote",
+    "Ingredients": "['1 paket kültür mantarı', '1 adet orta boy soğan', '3 yemek kaşığı sıvı yağ', '1/2 yemek kaşığı tereyağı', '1 adet büyük boy domates', '2 adet yeşil biber', '1 adet kapya biber', '2 diş sarımsak', '1 yemek kaşığı salça', '1 çay kaşığı tuz', '1 çay kaşığı pul biber', '1/2 çay kaşığı karabiber', '1 tutam kıyılmış maydanoz']",
+    "Instructions": "Tencereye tereyağı ve sıvı yağı ekleyin. Soğanı yemeklik doğrayıp kavurun.\nYeşil biber ve kapya biberi ekleyip kavurmaya devam edin.\nMantarları iri doğrayıp ekleyin. 2 dakika dokunmayın, sonra karıştırın.\nTuz, pul biber ve karabiberi ekleyin.\nSalçayı ilave edip karıştırın. Gerekirse 1/2 su bardağı sıcak su ekleyin.\nKüp küp domatesi ekleyin. Kısık ateşte 10 dakika pişirin.\nMaydanoz serperek servis edin.",
+    "Image_Name": "mantar-sote",
+    "Cleaned_Ingredients": "['kültür mantarı', 'soğan', 'sıvı yağ', 'tereyağı', 'domates', 'yeşil biber', 'kapya biber', 'sarımsak', 'salça', 'tuz', 'pul biber', 'karabiber', 'kıyılmış maydanoz']"
+  },
+  {
+    "Title": "Ispanaklı Fırın Patates",
+    "Ingredients": "['6 adet patates', '250 gram ıspanak', '1 adet soğan', '2 diş sarımsak', '100 gram rendelenmiş kaşar peyniri', '2 yemek kaşığı zeytinyağı', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber']",
+    "Instructions": "Patatesleri soyup dilimleyin ve haşlayın.\nIspanağı yıkayıp soteleyin, soğan ve sarımsak ekleyin.\nFırın kabına patates dilimlerini dizin.\nÜzerine ıspanaklı harç ve kaşar peyniri ekleyin.\nZeytinyağı ve baharatlarla tatlandırın.\n180 derece fırında 25 dakika pişirin.",
+    "Image_Name": "ispanakli-firin-patates",
+    "Cleaned_Ingredients": "['patates', 'ıspanak', 'soğan', 'sarımsak', 'rendelenmiş kaşar peyniri', 'zeytinyağı', 'tuz', 'karabiber', 'pul biber']"
+  },
+  {
+    "Title": "Fırında Soslu Karnabahar",
+    "Ingredients": "['1 adet orta boy karnabahar', '3 adet yumurta', '1/2 su bardağı süt', '4 yemek kaşığı un', '1 çay kaşığı tuz', '1/2 paket kabartma tozu', '1/2 çay bardağı sıvı yağ', '1 adet rendelenmiş havuç', '1/2 adet kıyılmış maydanoz', '1 su bardağı rendelenmiş kaşar peyniri', '6 yemek kaşığı süzme yoğurt', '1 çay kaşığı toz kırmızı biber', '4 yemek kaşığı sıvı yağ']",
+    "Instructions": "Karnabaharı çiçek çiçek ayırıp haşlayın ve parçalayın.\nGeniş bir kaba alıp yumurta, süt, un, tuz, kabartma tozu, sıvı yağ, havuç ve maydanozu ekleyip karıştırın.\nYağlı fırın kabına harcı yerleştirin.\nÜzerini toz kırmızı biberle karıştırdığınız kaşar peyniri ile kaplayın.\n190 derece fırında 25 dakika üzeri kızarana kadar pişirin.\nDilimleyip üzerine yoğurt ve kızdırılmış yağ gezdirerek servis edin.",
+    "Image_Name": "firinda-soslu-karnabahar",
+    "Cleaned_Ingredients": "['karnabahar', 'yumurta', 'süt', 'un', 'tuz', 'kabartma tozu', 'sıvı yağ', 'rendelenmiş havuç', 'kıyılmış maydanoz', 'rendelenmiş kaşar peyniri', 'süzme yoğurt', 'toz kırmızı biber', 'sıvı yağ']"
+  },
+  {
+    "Title": "Patates Oturtma",
+    "Ingredients": "['4 adet büyük boy patates', '500 gram orta yağlı kıyma', '1 adet büyük boy soğan', '1 diş sarımsak', '1 yemek kaşığı tereyağı', '3 yemek kaşığı zeytinyağı', '1 yemek kaşığı domates salçası', '1.5 su bardağı domates konservesi', '4 adet sivri biber', '1 çay kaşığı tuz', '1 çay kaşığı pul biber', '1 çay kaşığı kimyon', '1/2 çay kaşığı karabiber', '250 gram rendelenmiş kaşar peyniri']",
+    "Instructions": "Patatesleri soyup ince yuvarlak dilimleyin. Fırın tepsisine yayıp zeytinyağı ve tuzla 180 derecede 15 dakika ön pişirin.\nTavada tereyağı ve zeytinyağı ile kıymayı kavurun. Soğan ve sarımsak ekleyin.\nSalça, domates ve sivri biberi ekleyip kavurun. Baharatları ilave edin.\nBorcamı yağlayıp patateslerin yarısını tabana dizin.\nÜzerine kıymalı harcı yayın. Kalan patatesleri dizin.\nKaşar peynirini serpin. 180 derece fırında 10 dakika, ardından ızgara ile 7-8 dakika daha pişirin.\n10-15 dakika dinlendirip servis yapın.",
+    "Image_Name": "patates-oturtma",
+    "Cleaned_Ingredients": "['patates', 'orta yağlı kıyma', 'soğan', 'sarımsak', 'tereyağı', 'zeytinyağı', 'domates salçası', 'domates konservesi', 'sivri biber', 'tuz', 'pul biber', 'kimyon', 'karabiber', 'rendelenmiş kaşar peyniri']"
+  },
+  {
+    "Title": "Patates Yatağında Soslu Köfte",
+    "Ingredients": "['500 gram kıyma', '1 adet soğan', '1 yumurta', '2 dilim ekmek içi', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '4 adet patates', '2 adet domates', '1 yemek kaşığı salça', '2 yemek kaşığı sıvı yağ', '1 su bardağı sıcak su']",
+    "Instructions": "Kıyma, rendelenmiş soğan, yumurta, ıslatılmış ekmek ve baharatlarla köfte harcı hazırlayın.\nKöfteleri şekillendirin.\nPatatesleri dilimleyip fırın kabına dizin.\nÜzerine köfteleri yerleştirin.\nSalça, domates ve su ile sos hazırlayıp üzerine gezdirin.\n180 derece fırında 40 dakika pişirin.",
+    "Image_Name": "patates-yataginda-soslu-kofte",
+    "Cleaned_Ingredients": "['kıyma', 'soğan', 'yumurta', 'ekmek içi', 'tuz', 'karabiber', 'patates', 'domates', 'salça', 'sıvı yağ', 'sıcak su']"
+  },
+  {
+    "Title": "Mantarlı Tavuk Sote",
+    "Ingredients": "['500 gram tavuk but eti', '400 gram mantar', '1 adet soğan', '1 adet yeşil biber', '1 adet domates', '1 adet kırmızı biber', '3 yemek kaşığı zeytinyağı', '1 tatlı kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı kimyon', '1 çay kaşığı kekik', '1 tatlı kaşığı kırmızı toz biber']",
+    "Instructions": "Tavaya yağı alıp tavuk etlerini ekleyin. Suyunu salıp çekene kadar pişirin.\nSoğan ve biberleri doğrayıp ekleyin. 2-3 dakika kavurun.\nMantarları ekleyip 2-3 dakika pişirin.\nDomates, baharat ve tuzu ekleyin. Suyunu çekene kadar pişirin.\nSıcak servis yapın.",
+    "Image_Name": "mantarli-tavuk-sote",
+    "Cleaned_Ingredients": "['tavuk but eti', 'mantar', 'soğan', 'yeşil biber', 'domates', 'kırmızı biber', 'zeytinyağı', 'tuz', 'karabiber', 'kimyon', 'kekik', 'kırmızı toz biber']"
+  },
+  {
+    "Title": "Kaşarlı Tas Kebabı",
+    "Ingredients": "['500 gram kuşbaşı dana eti', '3 adet patates', '2 adet soğan', '2 adet domates', '2 adet sivri biber', '150 gram rendelenmiş kaşar peyniri', '2 yemek kaşığı tereyağı', '1 yemek kaşığı domates salçası', '1 çay kaşığı tuz', '1 çay kaşığı karabiber']",
+    "Instructions": "Eti tereyağında kavurun.\nSoğanları ekleyin. Salçayı ilave edin.\nSu ekleyip 30 dakika pişirin.\nPatatesleri ekleyin. Domates ve biberleri ilave edin.\n20 dakika daha pişirin.\nServis tabağına alıp üzerine kaşar peyniri serpin. Fırında veya mikrodalgada eritip servis yapın.",
+    "Image_Name": "kasarli-tas-kebabi",
+    "Cleaned_Ingredients": "['kuşbaşı dana eti', 'patates', 'soğan', 'domates', 'sivri biber', 'rendelenmiş kaşar peyniri', 'tereyağı', 'domates salçası', 'tuz', 'karabiber']"
+  },
+  {
+    "Title": "Sebzeli Misket Köfte",
+    "Ingredients": "['400 gram kıyma', '1 adet soğan', '1 adet havuç', '1 adet patates', '1 adet kabak', '1 yumurta', '2 yemek kaşığı un', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '2 yemek kaşığı sıvı yağ', '1 yemek kaşığı salça', '1 su bardağı sıcak su']",
+    "Instructions": "Sebzeleri rendeleyip suyunu sıkın.\nKıyma, soğan, sebzeler, yumurta, un ve baharatları karıştırıp yoğurun.\nCeviz büyüklüğünde köfteler yapın.\nTavada yağda köfteleri kavurun.\nSalça ve su ekleyip 15 dakika pişirin.",
+    "Image_Name": "sebzeli-misket-kofte",
+    "Cleaned_Ingredients": "['kıyma', 'soğan', 'havuç', 'patates', 'kabak', 'yumurta', 'un', 'tuz', 'karabiber', 'sıvı yağ', 'salça', 'sıcak su']"
+  },
+  {
+    "Title": "Tavuklu Patates Karnıyarık",
+    "Ingredients": "['4 adet patates', '400 gram tavuk göğsü', '2 adet soğan', '2 adet domates', '2 adet sivri biber', '3 yemek kaşığı zeytinyağı', '1 yemek kaşığı salça', '1 çay kaşığı tuz', '1 çay kaşığı karabiber']",
+    "Instructions": "Patatesleri ortadan ikiye bölüp içlerini oyun.\nTavuk ve soğanı kavurup salça, domates ve biber ekleyin.\nPatateslerin içine harcı doldurun.\nÜzerine domates dilimi koyun.\n180 derece fırında 45 dakika pişirin.",
+    "Image_Name": "tavuklu-patates-karniyarik",
+    "Cleaned_Ingredients": "['patates', 'tavuk göğsü', 'soğan', 'domates', 'sivri biber', 'zeytinyağı', 'salça', 'tuz', 'karabiber']"
+  },
+  {
+    "Title": "Tavuk Kanat",
+    "Ingredients": "['1 kg tavuk kanadı', '2 yemek kaşığı zeytinyağı', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '1 çay kaşığı kimyon', '1 diş sarımsak']",
+    "Instructions": "Tavuk kanatlarını yıkayıp kurulayın.\nZeytinyağı, baharatlar ve ezilmiş sarımsakla marine edin. 1 saat bekletin.\nFırın tepsisine dizin.\n200 derece fırında 40-45 dakika pişirin. Ara ara çevirip üzeri kızarsın.",
+    "Image_Name": "tavuk-kanat",
+    "Cleaned_Ingredients": "['tavuk kanadı', 'zeytinyağı', 'tuz', 'karabiber', 'pul biber', 'kimyon', 'sarımsak']"
+  },
+  {
+    "Title": "Patatesli Bezelyeli Tavuk",
+    "Ingredients": "['500 gram tavuk butu', '3 adet patates', '1 su bardağı bezelye', '2 adet soğan', '2 adet domates', '2 yemek kaşığı sıvı yağ', '1 yemek kaşığı salça', '1 çay kaşığı tuz', '1 çay kaşığı karabiber']",
+    "Instructions": "Tavukları kuşbaşı doğrayıp yağda kavurun.\nSoğanı ekleyip soteleyin. Salçayı ilave edin.\nPatatesleri küp doğrayıp ekleyin. Su ekleyip 20 dakika pişirin.\nBezelye ve domatesleri ekleyin. 10 dakika daha pişirin.\nBaharatlarla tatlandırıp servis yapın.",
+    "Image_Name": "patatesli-bezelyeli-tavuk",
+    "Cleaned_Ingredients": "['tavuk butu', 'patates', 'bezelye', 'soğan', 'domates', 'sıvı yağ', 'salça', 'tuz', 'karabiber']"
+  },
+  {
+    "Title": "Patatesli Tavuk Göğsü",
+    "Ingredients": "['400 gram tavuk göğsü', '4 adet patates', '2 adet soğan', '2 adet domates', '2 yemek kaşığı sıvı yağ', '1 yemek kaşığı salça', '1 çay kaşığı tuz', '1 çay kaşığı karabiber']",
+    "Instructions": "Tavuk göğsünü kuşbaşı doğrayın.\nPatatesleri dilimleyin.\nTavada tavuk ve soğanı kavurun.\nSalça, patates ve domates ekleyin. Su ilave edip kısık ateşte 30 dakika pişirin.\nBaharatlarla tatlandırın.",
+    "Image_Name": "patatesli-tavuk-gogsu",
+    "Cleaned_Ingredients": "['tavuk göğsü', 'patates', 'soğan', 'domates', 'sıvı yağ', 'salça', 'tuz', 'karabiber']"
+  },
+  {
+    "Title": "Karnabahar Shots",
+    "Ingredients": "['1 adet karnabahar', '2 yemek kaşığı zeytinyağı', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '1 çay kaşığı kimyon']",
+    "Instructions": "Karnabaharı küçük çiçeklere ayırın.\nZeytinyağı ve baharatlarla karıştırın.\nFırın tepsisine dizin.\n200 derece fırında 20-25 dakika kızartın.\nSıcak veya ılık atıştırmalık olarak servis yapın.",
+    "Image_Name": "karnabahar-shots",
+    "Cleaned_Ingredients": "['karnabahar', 'zeytinyağı', 'tuz', 'karabiber', 'pul biber', 'kimyon']"
+  },
+  {
+    "Title": "Belen Tava",
+    "Ingredients": "['500 gram kıyma', '4 adet patlıcan', '4 adet patates', '2 adet domates', '2 adet biber', '2 adet soğan', '3 yemek kaşığı sıvı yağ', '1 yemek kaşığı salça', '1 çay kaşığı tuz', '1 çay kaşığı karabiber']",
+    "Instructions": "Patlıcan ve patatesleri alacalı soyup kızartın veya fırında pişirin.\nKıymayı soğanla kavurun. Salça ve baharatları ekleyin.\nFırın kabına patlıcan ve patatesleri dizin.\nÜzerine kıymalı harç, domates ve biber ekleyin.\n180 derece fırında 30 dakika pişirin.",
+    "Image_Name": "belen-tava",
+    "Cleaned_Ingredients": "['kıyma', 'patlıcan', 'patates', 'domates', 'biber', 'soğan', 'sıvı yağ', 'salça', 'tuz', 'karabiber']"
+  },
+  {
+    "Title": "Patatesli Sulu Köfte",
+    "Ingredients": "['300 gram kıyma', '1/2 su bardağı ince bulgur', '1 adet soğan', '1 yumurta', '3 adet patates', '2 adet domates', '1 yemek kaşığı salça', '4 su bardağı su', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber']",
+    "Instructions": "Kıyma, bulgur, rendelenmiş soğan ve yumurtayı yoğurup köfteler yapın.\nTencerede salçayı kavurun. Su, domates ve patatesleri ekleyin.\nKöfteleri ekleyip kaynatın. Kısık ateşte 25 dakika pişirin.\nBaharatlarla tatlandırıp servis yapın.",
+    "Image_Name": "patatesli-sulu-kofte",
+    "Cleaned_Ingredients": "['kıyma', 'ince bulgur', 'soğan', 'yumurta', 'patates', 'domates', 'salça', 'su', 'tuz', 'karabiber', 'pul biber']"
+  },
+  {
+    "Title": "Sultan Kebabı",
+    "Ingredients": "['750 gram kemiksiz tavuk eti', '5 adet yufka', '1 adet soğan', '2 adet yeşil biber', '1 adet kırmızı biber', '3 yemek kaşığı sıvı yağ', '1 su bardağı tavuk suyu', '1 kase yoğurt', '2 diş sarımsak', '2 yemek kaşığı tereyağı', '1 çay kaşığı pul biber', '1 çay kaşığı kırmızı biber', 'tuz', 'karabiber']",
+    "Instructions": "Tavukları küçük doğrayıp haşlayın.\nSoğanı yağda kavurun. Biberleri ekleyip kavurun.\nTavukları süzüp tavaya ekleyin. Tuz ve baharatları ilave edin. Soğumaya bırakın.\nYufkayı 8 parçaya bölün. İç harcı koyup sigara böreği gibi sarın.\nYağlı kağıt serili tepsiye dizin. 180 derece fırında kızartın.\nIlık tavuk suyuna 3-4 dakika batırıp çıkarın.\n2-3 parmak kalınlığında kesip yoğurt, sarımsak ve kızdırılmış tereyağı ile servis yapın.",
+    "Image_Name": "sultan-kebabi",
+    "Cleaned_Ingredients": "['kemiksiz tavuk eti', 'yufka', 'soğan', 'yeşil biber', 'kırmızı biber', 'sıvı yağ', 'tavuk suyu', 'kase yoğurt', 'sarımsak', 'tereyağı', 'pul biber', 'kırmızı biber', 'tuz', 'karabiber']"
+  },
+  {
+    "Title": "Kuru Patlıcan Dolması",
+    "Ingredients": "['20 adet kuru patlıcan', '1.5 su bardağı pirinç', '250 gram kıyma', '2 adet soğan', '2 adet domates', '1 demet maydanoz', '1 yemek kaşığı salça', '1 su bardağı zeytinyağı', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '4 su bardağı sıcak su']",
+    "Instructions": "Kuru patlıcanları sıcak suda 15 dakika bekletip yumuşatın.\nPirinci yıkayın. Kıyma, soğan, domates, maydanoz, salça ve baharatlarla iç harç hazırlayın.\nPatlıcanların içini açıp harçla doldurun.\nTencereye dizin. Zeytinyağı ve sıcak su ekleyin.\nKısık ateşte 45 dakika pişirin.",
+    "Image_Name": "kuru-patlican-dolmasi",
+    "Cleaned_Ingredients": "['kuru patlıcan', 'pirinç', 'kıyma', 'soğan', 'domates', 'demet maydanoz', 'salça', 'zeytinyağı', 'tuz', 'karabiber', 'pul biber', 'sıcak su']"
+  },
+  {
+    "Title": "Mantar Soslu Tavuk",
+    "Ingredients": "['500 gram tavuk göğsü', '300 gram kültür mantarı', '1 kase krema', '2 diş sarımsak', '2 yemek kaşığı tereyağı', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı kekik']",
+    "Instructions": "Tavukları kuşbaşı doğrayıp tereyağında kavurun.\nMantarları dilimleyip ekleyin. 5 dakika pişirin.\nKrema, ezilmiş sarımsak ve baharatları ekleyin.\nKısık ateşte 5 dakika daha pişirip servis yapın.",
+    "Image_Name": "mantar-soslu-tavuk",
+    "Cleaned_Ingredients": "['tavuk göğsü', 'kültür mantarı', 'kase krema', 'sarımsak', 'tereyağı', 'tuz', 'karabiber', 'kekik']"
+  },
+  {
+    "Title": "Fırın Karnabahar",
+    "Ingredients": "['1 adet karnabahar', '3 yemek kaşığı zeytinyağı', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '1 çay kaşığı kimyon']",
+    "Instructions": "Karnabaharı çiçek çiçek ayırın.\nZeytinyağı ve baharatlarla karıştırın.\nFırın tepsisine yayın.\n200 derece fırında 25-30 dakika pişirin. Ara ara karıştırın.",
+    "Image_Name": "firin-karnabahar",
+    "Cleaned_Ingredients": "['karnabahar', 'zeytinyağı', 'tuz', 'karabiber', 'pul biber', 'kimyon']"
+  },
+  {
+    "Title": "Soğan Dolması",
+    "Ingredients": "['6 adet büyük soğan', '1 su bardağı pirinç', '250 gram kıyma', '2 adet domates', '1 demet maydanoz', '1 yemek kaşığı salça', '2 yemek kaşığı zeytinyağı', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '3 su bardağı sıcak su']",
+    "Instructions": "Soğanları haşlayıp içlerini oyun.\nPirinci yıkayın. Kıyma, domates, maydanoz, salça ve baharatlarla iç harç hazırlayın.\nSoğanların içine harç doldurun.\nTencereye dizin. Zeytinyağı ve su ekleyin.\nKısık ateşte 40 dakika pişirin.",
+    "Image_Name": "sogan-dolmasi",
+    "Cleaned_Ingredients": "['büyük soğan', 'pirinç', 'kıyma', 'domates', 'demet maydanoz', 'salça', 'zeytinyağı', 'tuz', 'karabiber', 'sıcak su']"
+  },
+  {
+    "Title": "Tavuk Köftesi",
+    "Ingredients": "['500 gram tavuk kıyması', '1 adet soğan', '1 yumurta', '2 yemek kaşığı galeta unu', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '2 yemek kaşığı sıvı yağ']",
+    "Instructions": "Tavuk kıymasına rendelenmiş soğan, yumurta, galeta unu ve baharatları ekleyip yoğurun.\nCeviz büyüklüğünde köfteler şekillendirin.\nTavada veya ızgarada pişirin.\nSıcak servis yapın.",
+    "Image_Name": "tavuk-koftesi",
+    "Cleaned_Ingredients": "['tavuk kıyması', 'soğan', 'yumurta', 'galeta unu', 'tuz', 'karabiber', 'pul biber', 'sıvı yağ']"
+  },
+  {
+    "Title": "Zeytinyağlı Patlıcan Yemeği",
+    "Ingredients": "['4 adet patlıcan', '2 adet soğan', '3 adet domates', '2 adet sivri biber', '1 su bardağı zeytinyağı', '1 çay kaşığı tuz', '1 çay kaşığı şeker', '1 adet limon']",
+    "Instructions": "Patlıcanları alacalı soyup küp doğrayın. Tuzlu suda bekletin.\nSoğanları zeytinyağında kavurun.\nPatlıcan ve biberleri ekleyin.\nDomatesleri ekleyip kısık ateşte 30 dakika pişirin.\nLimon suyu, tuz ve şekerle tatlandırın. Soğuk servis yapın.",
+    "Image_Name": "zeytinyagli-patlican-yemegi",
+    "Cleaned_Ingredients": "['patlıcan', 'soğan', 'domates', 'sivri biber', 'zeytinyağı', 'tuz', 'şeker', 'limon']"
+  },
+  {
+    "Title": "Köfte",
+    "Ingredients": "['500 gram kıyma', '1 adet soğan', '2 dilim ekmek içi', '1 yumurta', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '1 çay kaşığı kimyon']",
+    "Instructions": "Soğanı rendeleyip suyunu sıkın.\nEkmek içini ıslatıp suyunu sıkın.\nKıymaya soğan, ekmek, yumurta ve baharatları ekleyip yoğurun.\nBuzdolabında 1 saat dinlendirin.\nKöfteleri şekillendirip ızgarada veya tavada pişirin.",
+    "Image_Name": "kofte",
+    "Cleaned_Ingredients": "['kıyma', 'soğan', 'ekmek içi', 'yumurta', 'tuz', 'karabiber', 'pul biber', 'kimyon']"
+  },
+  {
+    "Title": "Zeytinyağlı Kuru Dolma",
+    "Ingredients": "['20 adet kuru biber veya kuru patlıcan', '1.5 su bardağı pirinç', '3 adet soğan', '2 adet domates', '1 demet dereotu', '1 demet nane', '1 su bardağı zeytinyağı', '1 adet limon', '1 çay kaşığı tuz', '1 çay kaşığı şeker', '4 su bardağı sıcak su']",
+    "Instructions": "Kuru dolmalıkları sıcak suda yumuşatın.\nPirinci yıkayın. Soğan, domates, dereotu, nane ve baharatlarla iç harç hazırlayın.\nDolmalıkları harçla doldurun.\nTencereye dizin. Zeytinyağı, limon suyu ve sıcak su ekleyin.\nKısık ateşte 45 dakika pişirin. Soğuk servis yapın.",
+    "Image_Name": "zeytinyagli-kuru-dolma",
+    "Cleaned_Ingredients": "['kuru biber veya kuru patlıcan', 'pirinç', 'soğan', 'domates', 'demet dereotu', 'demet nane', 'zeytinyağı', 'limon', 'tuz', 'şeker', 'sıcak su']"
+  },
+  {
+    "Title": "Soslu Tavuk",
+    "Ingredients": "['500 gram tavuk butu', '2 adet domates', '2 adet sivri biber', '1 adet soğan', '2 yemek kaşığı salça', '3 yemek kaşığı sıvı yağ', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 su bardağı sıcak su']",
+    "Instructions": "Tavukları kuşbaşı doğrayıp yağda kavurun.\nSoğanı ekleyip soteleyin. Salçayı ilave edin.\nDomates ve biberleri doğrayıp ekleyin.\nSu ekleyip kısık ateşte 25 dakika pişirin.\nBaharatlarla tatlandırıp servis yapın.",
+    "Image_Name": "soslu-tavuk",
+    "Cleaned_Ingredients": "['tavuk butu', 'domates', 'sivri biber', 'soğan', 'salça', 'sıvı yağ', 'tuz', 'karabiber', 'sıcak su']"
+  },
+  {
+    "Title": "Mantar Kavurması",
+    "Ingredients": "['500 gram kültür mantarı', '2 adet soğan', '3 yemek kaşığı tereyağı', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber']",
+    "Instructions": "Mantarları dilimleyin. Yıkamayın, nemli bezle silin.\nTavada tereyağını eritin. Soğanı kavurun.\nMantarları ekleyin. Yüksek ateşte 5-7 dakika kavurun.\nTuz ve baharatları ekleyip servis yapın.",
+    "Image_Name": "mantar-kavurmasi",
+    "Cleaned_Ingredients": "['kültür mantarı', 'soğan', 'tereyağı', 'tuz', 'karabiber', 'pul biber']"
+  },
+  {
+    "Title": "Bayat Pide Kebabı",
+    "Ingredients": "['4 adet bayat pide', '300 gram kıyma', '2 adet soğan', '2 adet domates', '2 adet biber', '2 yemek kaşığı sıvı yağ', '1 yemek kaşığı salça', '1 çay kaşığı tuz', '1 çay kaşığı karabiber']",
+    "Instructions": "Kıymayı soğanla kavurun. Salça, domates ve biber ekleyin.\nBaharatlarla tatlandırın.\nBayat pideleri ısıtıp üzerine kıymalı harç koyun.\nFırında veya tavada ısıtıp servis yapın.",
+    "Image_Name": "bayat-pide-kebabi",
+    "Cleaned_Ingredients": "['bayat pide', 'kıyma', 'soğan', 'domates', 'biber', 'sıvı yağ', 'salça', 'tuz', 'karabiber']"
+  },
+  {
+    "Title": "Taco",
+    "Ingredients": "['8 adet taco ekmeği', '400 gram kıyma', '1 paket taco baharatı', '1 adet soğan', '2 adet domates', '1 kase marul', '1 kase rendelenmiş kaşar', '1 kase salsa sos', '1 kase ekşi krema']",
+    "Instructions": "Kıymayı soğanla kavurun. Taco baharatını ekleyin.\nTaco ekmeklerini ısıtın.\nHer taco ekmeğine kıyma, doğranmış domates, marul, kaşar, salsa ve ekşi krema ekleyin.\nKatlayıp servis yapın.",
+    "Image_Name": "taco",
+    "Cleaned_Ingredients": "['taco ekmeği', 'kıyma', 'taco baharatı', 'soğan', 'domates', 'kase marul', 'kase rendelenmiş kaşar', 'kase salsa sos', 'kase ekşi krema']"
+  },
+  {
+    "Title": "Ödemiş Köftesi",
+    "Ingredients": "['500 gram kıyma', '1 adet soğan', '2 dilim ekmek içi', '1 yumurta', '1 çay kaşığı karbonat', '1 çay kaşığı tuz', '1 çay kaşığı karabiber', '1 çay kaşığı pul biber', '2 yemek kaşığı sıvı yağ']",
+    "Instructions": "Soğanı rendeleyip suyunu sıkın.\nEkmek içini ıslatıp suyunu sıkın.\nKıymaya soğan, ekmek, yumurta, karbonat ve baharatları ekleyip yoğurun.\nİzmir usulü yassı köfteler şekillendirin.\nTavada veya ızgarada pişirin. Patates kızartması ile servis yapın.",
+    "Image_Name": "odemis-koftesi",
+    "Cleaned_Ingredients": "['kıyma', 'soğan', 'ekmek içi', 'yumurta', 'karbonat', 'tuz', 'karabiber', 'pul biber', 'sıvı yağ']"
   }
 ]

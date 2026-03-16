@@ -2,7 +2,7 @@
   "index_type": "IndexFlatL2",
   "metric": "L2",
   "dimension": 384,
-  "num_vectors": 500,
+  "num_vectors": 532,
   "recipes": [
     {
       "index": 0,
@@ -2503,6 +2503,166 @@
       "index": 499,
       "title": "Süt Ürünsüz Yağlama (Süt Ürünü Yok)",
       "image_name": "sut-urunsuz-yaglama"
+    },
+    {
+      "index": 500,
+      "title": "Patates Köftesi",
+      "image_name": "patates-koftesi"
+    },
+    {
+      "index": 501,
+      "title": "Sodalı Köfte",
+      "image_name": "sodali-kofte"
+    },
+    {
+      "index": 502,
+      "title": "Mantarlı Tavuk",
+      "image_name": "mantarli-tavuk"
+    },
+    {
+      "index": 503,
+      "title": "Mantar Sote",
+      "image_name": "mantar-sote"
+    },
+    {
+      "index": 504,
+      "title": "Ispanaklı Fırın Patates",
+      "image_name": "ispanakli-firin-patates"
+    },
+    {
+      "index": 505,
+      "title": "Fırında Soslu Karnabahar",
+      "image_name": "firinda-soslu-karnabahar"
+    },
+    {
+      "index": 506,
+      "title": "Patates Oturtma",
+      "image_name": "patates-oturtma"
+    },
+    {
+      "index": 507,
+      "title": "Patates Yatağında Soslu Köfte",
+      "image_name": "patates-yataginda-soslu-kofte"
+    },
+    {
+      "index": 508,
+      "title": "Mantarlı Tavuk Sote",
+      "image_name": "mantarli-tavuk-sote"
+    },
+    {
+      "index": 509,
+      "title": "Kaşarlı Tas Kebabı",
+      "image_name": "kasarli-tas-kebabi"
+    },
+    {
+      "index": 510,
+      "title": "Sebzeli Misket Köfte",
+      "image_name": "sebzeli-misket-kofte"
+    },
+    {
+      "index": 511,
+      "title": "Tavuklu Patates Karnıyarık",
+      "image_name": "tavuklu-patates-karniyarik"
+    },
+    {
+      "index": 512,
+      "title": "Tavuk Kanat",
+      "image_name": "tavuk-kanat"
+    },
+    {
+      "index": 513,
+      "title": "Patatesli Bezelyeli Tavuk",
+      "image_name": "patatesli-bezelyeli-tavuk"
+    },
+    {
+      "index": 514,
+      "title": "Patatesli Tavuk Göğsü",
+      "image_name": "patatesli-tavuk-gogsu"
+    },
+    {
+      "index": 515,
+      "title": "Karnabahar Shots",
+      "image_name": "karnabahar-shots"
+    },
+    {
+      "index": 516,
+      "title": "Belen Tava",
+      "image_name": "belen-tava"
+    },
+    {
+      "index": 517,
+      "title": "Patatesli Sulu Köfte",
+      "image_name": "patatesli-sulu-kofte"
+    },
+    {
+      "index": 518,
+      "title": "Sultan Kebabı",
+      "image_name": "sultan-kebabi"
+    },
+    {
+      "index": 519,
+      "title": "Kuru Patlıcan Dolması",
+      "image_name": "kuru-patlican-dolmasi"
+    },
+    {
+      "index": 520,
+      "title": "Mantar Soslu Tavuk",
+      "image_name": "mantar-soslu-tavuk"
+    },
+    {
+      "index": 521,
+      "title": "Fırın Karnabahar",
+      "image_name": "firin-karnabahar"
+    },
+    {
+      "index": 522,
+      "title": "Soğan Dolması",
+      "image_name": "sogan-dolmasi"
+    },
+    {
+      "index": 523,
+      "title": "Tavuk Köftesi",
+      "image_name": "tavuk-koftesi"
+    },
+    {
+      "index": 524,
+      "title": "Zeytinyağlı Patlıcan Yemeği",
+      "image_name": "zeytinyagli-patlican-yemegi"
+    },
+    {
+      "index": 525,
+      "title": "Köfte",
+      "image_name": "kofte"
+    },
+    {
+      "index": 526,
+      "title": "Zeytinyağlı Kuru Dolma",
+      "image_name": "zeytinyagli-kuru-dolma"
+    },
+    {
+      "index": 527,
+      "title": "Soslu Tavuk",
+      "image_name": "soslu-tavuk"
+    },
+    {
+      "index": 528,
+      "title": "Mantar Kavurması",
+      "image_name": "mantar-kavurmasi"
+    },
+    {
+      "index": 529,
+      "title": "Bayat Pide Kebabı",
+      "image_name": "bayat-pide-kebabi"
+    },
+    {
+      "index": 530,
+      "title": "Taco",
+      "image_name": "taco"
+    },
+    {
+      "index": 531,
+      "title": "Ödemiş Köftesi",
+      "image_name": "odemis-koftesi"
     }
   ]
 }
