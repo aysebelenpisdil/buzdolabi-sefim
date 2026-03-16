@@ -22,10 +22,8 @@ Buzdolabınızdaki malzemelere göre yapay zeka destekli tarif öneren web uygul
 ### 1. Bağımlılıkları yükle
 
 ```bash
-# Frontend
 npm install
 
-# Backend
 cd backend
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
@@ -38,7 +36,7 @@ pip install -r requirements.txt
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key
-SESSION_SECRET=rastgele-guvenli-bir-string   # Örn: python3 -c "import secrets; print(secrets.token_urlsafe(32))"
+SESSION_SECRET=rastgele-guvenli-bir-string
 ```
 
 **Magic Link E-posta (SMTP)** – Giriş bağlantısı e-posta ile gönderilsin istiyorsanız:
@@ -74,24 +72,24 @@ python scripts/build_faiss_index.py
 ```bash
 cd backend
 source venv/bin/activate
-uvicorn app.main:app --reload --port 3001
+uvicorn app.main:app --reload --port 3001 --reload-exclude 'venv/*'
 ```
+veya `npm run dev:backend`
 
 **Terminal 2 – Frontend:**
 ```bash
 npm run dev
 ```
 
-Tarayıcıda: http://localhost:3000
+Tarayıcıda: http://127.0.0.1:3000
+
+> **Not:** `--reload-exclude 'venv/*'` venv klasöründeki değişikliklerin uvicorn'u sürekli yeniden başlatmasını önler.
 
 ## Testler
 
 ```bash
-# Backend testleri (pytest)
 npm run test:backend
-# veya: cd backend && source venv/bin/activate && python -m pytest tests/ -v
 
-# Frontend testleri (vitest)
 npm run test
 ```
 
@@ -99,19 +97,20 @@ npm run test
 
 ```
 smart-fridge-chef/
-├── backend/                 # FastAPI backend
+├── backend/
 │   ├── app/
-│   │   ├── models/          # Pydantic modelleri
-│   │   ├── routes/          # API endpoint'leri (auth, recipes, feedback)
-│   │   ├── services/        # İş mantığı (auth, DB, RAG, FAISS)
-│   │   └── middleware/      # Oturum doğrulama
-│   ├── data/                # recipes.json, FAISS indeks, SQLite DB
-│   ├── scripts/             # build_faiss_index.py
-│   └── tests/               # Pytest testleri
-├── pages/                   # React sayfaları
-├── store/                   # AuthContext, FridgeContext
-├── utils/                   # API istemcisi, yardımcılar
-└── tests/                   # Vitest testleri
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   └── middleware/
+│   ├── data/
+│   ├── scripts/
+│   └── tests/
+├── components/
+├── pages/
+├── store/
+├── utils/
+└── tests/
 ```
 
 ## Canlıya Alma Öncesi Kontrol Listesi
