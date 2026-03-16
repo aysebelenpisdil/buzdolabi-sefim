@@ -1,6 +1,6 @@
-# Buzdolabı Şefi (Smart Fridge Chef)
+# Buzdolabı Şefi 
 
-Buzdolabınızdaki malzemelere göre yapay zeka destekli tarif öneren web uygulaması. Kullanıcı hesapları, beğeni/atlama takibi, tüketim kaydı ve haftalık tekrar analizi destekler.
+Buzdolabınızdaki malzemelere göre yapay zeka destekli tarif öneren web uygulaması. Kullanıcı hesapları, beğeni/atlama takibi, tüketim kaydı ve haftalık tekrar analizi destekler. Türk yemeklerine ve Türkçe özelinde geliştirilmiştir. -Belen
 
 ## Özellikler
 
@@ -113,14 +113,14 @@ smart-fridge-chef/
 └── tests/
 ```
 
-## Canlıya Alma Öncesi Kontrol Listesi
+## Canlıya Almadan Önce Bunlara Bakın
 
-- [ ] `SESSION_SECRET` güçlü ve benzersiz
-- [ ] `GEMINI_API_KEY` ayarlı
-- [ ] `NODE_ENV=production` (backend)
-- [ ] CORS `allow_origins` canlı frontend URL'i içeriyor
-- [ ] SMTP ayarları (magic link e-posta gönderimi için; `backend/.env.example` örneğe bakın)
-- [ ] SQLite veritabanı yedekleme stratejisi
+- [ ] **Oturum güvenliği:** `SESSION_SECRET` için rastgele, güçlü bir değer kullanın (varsayılan değeri değiştirin)
+- [ ] **AI özellikleri:** `GEMINI_API_KEY` tanımlı olsun; aksi halde tarif açıklamaları ve ikame önerileri çalışmaz
+- [ ] **Production modu:** Backend'i `NODE_ENV=production` ile çalıştırın
+- [ ] **CORS:** `FRONTEND_URL` veya `allow_origins` içinde canlı frontend adresiniz (örn. `https://uygulama.com`) tanımlı olsun
+- [ ] **E-posta girişi:** Magic link göndermek istiyorsanız SMTP ayarlarını yapın (`backend/.env.example` referans alınabilir)
+- [ ] **Veri güvenliği:** SQLite veritabanınızı düzenli yedekleyin
 
 ## API Dokümantasyonu
 
