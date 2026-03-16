@@ -156,5 +156,30 @@ class DatabaseService:
         finally:
             await db.close()
 
+    async def get_fridge_ingredients(self, user_id: str) -> list[str]:
+        db = await get_db()
+        try:
+            cursor = await db.execute(
+                "SELECT ingredient FROM fridge_ingredients WHERE user_id = ? ORDER BY ingredient",
+                (user_id,)
+            )
+            return [r["ingredient"] for r in await cursor.fetchall()]
+        finally:
+            await db.close()
+
+    async def save_fridge_ingredients(self, user_id: str, ingredients: list[str]) -> None:
+        db = await get_db()
+        try:
+            await db.execute("DELETE FROM fridge_ingredients WHERE user_id = ?", (user_id,))
+            for ing in ingredients:
+                if ing and str(ing).strip():
+                    await db.execute(
+                        "INSERT INTO fridge_ingredients (user_id, ingredient) VALUES (?, ?)",
+                        (user_id, str(ing).strip())
+                    )
+            await db.commit()
+        finally:
+            await db.close()
+
 
 database_service = DatabaseService()

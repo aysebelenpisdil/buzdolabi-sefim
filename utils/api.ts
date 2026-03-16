@@ -321,6 +321,30 @@ export const getUserFeatures = async (): Promise<UserFeatures> => {
     return response.json();
 };
 
+export const getFridgeIngredients = async (): Promise<{ ingredients: string[] }> => {
+    const response = await fetch(`${API_BASE_URL}/fridge/ingredients`, {
+        credentials: 'include',
+    });
+    if (response.status === 401) return { ingredients: [] };
+    if (!response.ok) await handleApiError(response);
+    return response.json();
+};
+
+export const saveFridgeIngredients = async (ingredients: string[]): Promise<void> => {
+    const response = await fetch(`${API_BASE_URL}/fridge/ingredients`, {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ingredients }),
+    });
+    if (!response.ok) {
+        if (response.status === 401) {
+            throw { message: 'Oturum süresi doldu. Lütfen tekrar giriş yapın.', status: 401 } as ApiError;
+        }
+        await handleApiError(response);
+    }
+};
+
 export const getRecipeStatus = async (recipeTitle: string): Promise<{ status: string | null }> => {
     const response = await fetch(
         `${API_BASE_URL}/feedback/recipe-status/${encodeURIComponent(recipeTitle)}`,

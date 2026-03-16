@@ -64,6 +64,14 @@ CREATE INDEX IF NOT EXISTS idx_interactions_type ON recipe_interactions(interact
 CREATE INDEX IF NOT EXISTS idx_interactions_recipe ON recipe_interactions(recipe_title);
 CREATE INDEX IF NOT EXISTS idx_consumption_user ON consumption_logs(user_id);
 CREATE INDEX IF NOT EXISTS idx_consumption_date ON consumption_logs(consumed_at);
+
+CREATE TABLE IF NOT EXISTS fridge_ingredients (
+    user_id TEXT NOT NULL REFERENCES users(id),
+    ingredient TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, ingredient)
+);
+CREATE INDEX IF NOT EXISTS idx_fridge_user ON fridge_ingredients(user_id);
 """
 
 USER_FEATURES_VIEW_SQL = """
@@ -89,6 +97,37 @@ LEFT JOIN recipe_interactions ri ON u.id = ri.user_id
 LEFT JOIN consumption_logs cl ON u.id = cl.user_id
 GROUP BY u.id;
 """
+
+
+async def _migrate_fridge_from_interactions(db):
+    """Populate fridge_ingredients from latest context_ingredients per user (one-time, only if user has no fridge yet)."""
+    import json
+    cursor = await db.execute(
+        """SELECT ri.user_id, ri.context_ingredients FROM recipe_interactions ri
+           WHERE ri.context_ingredients IS NOT NULL AND ri.context_ingredients != ''
+           AND NOT EXISTS (SELECT 1 FROM fridge_ingredients fi WHERE fi.user_id = ri.user_id)
+           ORDER BY ri.created_at DESC"""
+    )
+    seen_users = set()
+    rows = await cursor.fetchall()
+    for row in rows:
+        user_id = row[0]
+        if user_id in seen_users:
+            continue
+        seen_users.add(user_id)
+        try:
+            ingredients = json.loads(row[1])
+            if not ingredients:
+                continue
+            for ing in ingredients:
+                if isinstance(ing, str) and ing.strip():
+                    await db.execute(
+                        """INSERT OR IGNORE INTO fridge_ingredients (user_id, ingredient)
+                           VALUES (?, ?)""",
+                        (user_id, ing.strip())
+                    )
+        except (json.JSONDecodeError, TypeError):
+            continue
 
 
 async def get_db() -> aiosqlite.Connection:
@@ -131,6 +170,7 @@ async def init_db():
                 COMMIT;
             """)
         await db.executescript(USER_FEATURES_VIEW_SQL)
+        await _migrate_fridge_from_interactions(db)
         await db.commit()
         logger.info(f"Database initialized at {DB_PATH}")
     finally:

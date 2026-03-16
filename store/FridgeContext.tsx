@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, useCallback, ReactNode } from 'react';
+import { useAuth } from './AuthContext';
+import { getFridgeIngredients, saveFridgeIngredients } from '../utils/api';
 
 export interface DietaryPreferences {
     glutenFree: boolean;
@@ -21,13 +23,14 @@ interface FridgeContextType {
 const FridgeContext = createContext<FridgeContextType | undefined>(undefined);
 
 export const FridgeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    // Initialize fridge ingredients from localStorage
+    const { user } = useAuth();
+    const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
     const [fridgeIngredients, setFridgeIngredients] = useState<string[]>(() => {
         const saved = localStorage.getItem('fridgeIngredients');
         return saved ? JSON.parse(saved) : [];
     });
 
-    // Initialize dietary preferences from localStorage
     const [dietaryPreferences, setDietaryPreferencesState] = useState<DietaryPreferences>(() => {
         const saved = localStorage.getItem('dietaryPreferences');
         return saved ? JSON.parse(saved) : {
@@ -39,15 +42,43 @@ export const FridgeProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         };
     });
 
-    // Initialize excluded ingredients from localStorage
     const [excludedIngredients, setExcludedIngredients] = useState<string[]>(() => {
         const saved = localStorage.getItem('excludedIngredients');
         return saved ? JSON.parse(saved) : [];
     });
 
+    const fetchFridgeFromApi = useCallback(async () => {
+        try {
+            const { ingredients } = await getFridgeIngredients();
+            setFridgeIngredients(ingredients);
+        } catch {
+            setFridgeIngredients([]);
+        }
+    }, []);
+
     useEffect(() => {
-        localStorage.setItem('fridgeIngredients', JSON.stringify(fridgeIngredients));
-    }, [fridgeIngredients]);
+        if (user) {
+            fetchFridgeFromApi();
+        } else {
+            const saved = localStorage.getItem('fridgeIngredients');
+            setFridgeIngredients(saved ? JSON.parse(saved) : []);
+        }
+    }, [user?.id, fetchFridgeFromApi]);
+
+    useEffect(() => {
+        if (!user) {
+            localStorage.setItem('fridgeIngredients', JSON.stringify(fridgeIngredients));
+            return;
+        }
+        if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
+        saveTimeoutRef.current = setTimeout(() => {
+            saveFridgeIngredients(fridgeIngredients).catch(() => {});
+            saveTimeoutRef.current = null;
+        }, 500);
+        return () => {
+            if (saveTimeoutRef.current) clearTimeout(saveTimeoutRef.current);
+        };
+    }, [user?.id, fridgeIngredients]);
 
     useEffect(() => {
         localStorage.setItem('dietaryPreferences', JSON.stringify(dietaryPreferences));
